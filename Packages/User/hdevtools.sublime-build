@@ -1,0 +1,5 @@
+{
+  "cmd": ["/Users/dmilith/Library/Haskell/bin/hdevtools", "check", "-w", "$file"],
+  // "file_regex": "^(.*?):(\\d+):(\\d+):",
+  "selector": "source.haskell"
+}

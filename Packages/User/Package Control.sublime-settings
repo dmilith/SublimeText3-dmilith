@@ -1,0 +1,40 @@
+{
+	"auto_upgrade_last_run": false,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"anaconda_rust",
+		"CoffeeScript",
+		"CTags",
+		"DashDoc",
+		"Elixir",
+		"ElixirSublime",
+		"File History",
+		"Fold Comments",
+		"Gist",
+		"Git Config",
+		"GitGutter",
+		"LESS",
+		"nginx",
+		"Package Control",
+		"Rust",
+		"SFTP",
+		"SideBarEnhancements",
+		"SSH Config",
+		"SublimeLinter",
+		"SublimeLinter-contrib-checkpatch",
+		"SublimeLinter-contrib-elixirc",
+		"SublimeLinter-contrib-rustc",
+		"SublimeLinter-shellcheck",
+		"Theme - Cobalt2",
+		"TOML"
+	],
+	"repository_channels":
+	[
+		"https://sublime.wbond.net/testing/packages.json"
+	]
+}

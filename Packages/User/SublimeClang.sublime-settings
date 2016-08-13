@@ -1,0 +1,18 @@
+{
+    "options": [
+        "-I/Software/Qtws53/include",
+        "-F/Software/Qtws53/lib",
+        "-L/Software/Qtws53/lib",
+        "-I/Software/Qtws53/lib/QtCore.framework/Headers",
+        "-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include",
+        "-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/include/c++/4.2.1"
+    ],
+    "additional_language_options": {
+        "c++" : ["-std=c++11", "-stdlib=libc++", "-O0", "-ferror-limit=1", "-ffast-math", "-Wall", "-pipe", "-Wno-unused-command-line-argument"], 
+        //  
+        // -std=gnu0x -stdlib=libc+   / "-std=c++11", 
+        "c": ["-O0", "-ferror-limit=0", "-Wno-unused-command-line-argument"],
+        "objc": [],
+        "objc++": []
+    }
+}

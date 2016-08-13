@@ -1,0 +1,8 @@
+[
+    { "keys": ["super+t"], "context": [ {"key" : "is_haskell_source" } ], "command": "sublime_haskell_show_type" },
+    { "keys": ["super+i"], "context": [ {"key" : "is_haskell_source" } ], "command": "sublime_haskell_insert_type" },
+    { "keys": ["super+y"], "context": [ {"key" : "is_haskell_source" } ], "command": "sublime_haskell_symbol_info" },
+
+    { "keys": ["alt+d", "alt+d"], "context": [ {"key" : "is_haskell_source" } ], "command": "sublime_haskell_go_to_declaration" },
+
+]

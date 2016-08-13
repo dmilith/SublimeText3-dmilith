@@ -1,0 +1,7 @@
+{
+    "remove_non_existent_files_on_preview": false,
+    "cleanup_on_startup": true,
+    "delete_all_on_startup": false,
+    "monospace_font": true,
+    "prettify_history": true,
+}

@@ -1,0 +1,30 @@
+{
+	"add_to_PATH":
+	[
+		"/Software/Ghc/exports",
+		"/Software/Ghc/bin",
+	],
+	"args":
+	{
+		"panel": "output.exec"
+	},
+	"auto_build_mode": "typecheck-then-warnings",
+	"auto_run_tests": true,
+	"command": "show_panel",
+	"enable_auto_build": false,
+	"enable_auto_check": true,
+	"enable_ghc_mod": true,
+	"enable_hdevtools": false,
+	"enable_hdocs": false,
+	"ghc_opts":
+	[
+		"-w",
+		"-threaded",
+		"-rtsopts"
+	],
+	"inspect_modules": true,
+	"keys":
+	[
+		"F4"
+	]
+}
