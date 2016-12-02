@@ -18,7 +18,6 @@
 
   { "keys": ["super+alt+c"], "command": "find_under_expand"},
   { "keys": ["super+alt+shift+d"], "command": "find_all_under" },
-  { "keys": ["super+alt+x"], "command": "insert_command_output", "args": { "cmdline": ["/usr/local/bin/gittower", "$file_path"] } },
   { "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
 
   { "keys": ["super+shift+d"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },

@@ -115,6 +115,7 @@
 		"*":
 		[
 			"/Software/Rust/exports",
+			"/Software/Shellcheck/exports",
 			"/Software/Elixir/exports",
 			"/Software/Zsh/exports",
 			"/Library/Frameworks/Python.framework/Versions/3.5/bin",
