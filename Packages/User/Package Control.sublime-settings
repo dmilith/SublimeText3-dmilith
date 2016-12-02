@@ -36,6 +36,7 @@
 		"SublimeLinter-json",
 		"SublimeLinter-pyflakes",
 		"SublimeLinter-pyyaml",
+		"SublimeLinter-shellcheck",
 		"SublimeLinter-xmllint",
 		"Theme - Cobalt2",
 		"Theme - Nexus",
