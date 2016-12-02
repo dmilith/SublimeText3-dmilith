@@ -1,8 +1,8 @@
 {
     "user": {
         "debug": false,
-        "delay": 0.12,
-        "error_color": "D02000",
+        "delay": 0.1,
+        "error_color": "E02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Danish Royalty/Danish Royalty.gutter-theme",
         "gutter_theme_excludes": [],
         "lint_mode": "background",
@@ -19,8 +19,7 @@
                 "warnings": [
                     "README",
                     "TODO",
-                    "XXX",
-                    "@todo"
+                    "XXX"
                 ]
             },
             "clang": {
@@ -111,8 +110,12 @@
                 "excludes": []
             },
             "shellcheck": {
-                "@disable": true,
-                "args": [],
+                "@disable": false,
+                "args": [
+                    "--shell=sh",
+                    "--color=never",
+                    "--exclude=SC2034,SC1090,SC1091",
+                ],
                 "exclude": "",
                 "excludes": []
             },
@@ -127,15 +130,18 @@
                 "excludes": []
             }
         },
-        "mark_style": "squiggly underline",
+        "mark_style": "outline",
         "no_column_highlights_line": false,
         "passive_warnings": true,
         "paths": {
             "linux": [],
             "osx": [
-                "/Software/Rust/bin",
+                "/Software/Rust/exports",
+                "/Software/Shellcheck/exports",
+                "/Software/Elixir/exports",
+                "/Software/Ctags/exports",
+                "/Library/Frameworks/Python.framework/Versions/3.5/bin",
                 "/usr/local/bin",
-                "/Library/Frameworks/Python.framework/Versions/3.5/bin"
             ],
             "windows": []
         },
