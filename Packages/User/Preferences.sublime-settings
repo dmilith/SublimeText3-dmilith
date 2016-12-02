@@ -26,7 +26,7 @@
 		"*.ko"
 	],
 	"bold_folder_labels": true,
-	"caret_extra_bottom": 3,
+	"caret_extra_bottom": 4,
 	"caret_extra_top": 3,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
@@ -34,14 +34,14 @@
 	"copy_on_mouse_select": true,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
-	"detect_slow_plugins": false,
+	"detect_slow_plugins": true,
 	"draw_centered": true,
 	"draw_indent_guides": true,
 	"draw_white_space": "all",
 	"enable_telemetry": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"fallback_encoding": "UTF-8",
+	"fallback_encoding": "ASCII",
 	"file_exclude_patterns":
 	[
 		".VolumeIcon.icns",
@@ -64,7 +64,9 @@
 		"*.class",
 		"*.psd",
 		"*.db",
-		"*.save0"
+		"*.save0",
+		"*.retry",
+		"*.git-keep"
 	],
 	"folder_exclude_patterns":
 	[
@@ -87,14 +89,15 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 15.0,
+	"font_size": 18.5,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"ignore_whitespace": "all",
+	"ignore_whitespace": "",
 	"ignored_packages":
 	[
+		"Rust",
 		"Vintage",
 		"Vintageex"
 	],
@@ -114,25 +117,27 @@
 			"/Software/Rust/exports",
 			"/Software/Elixir/exports",
 			"/Software/Zsh/exports",
-			"/Software/Ghc/exports"
+			"/Library/Frameworks/Python.framework/Versions/3.5/bin",
+			"/usr/local/bin",
+			"/usr/bin",
+			"/bin"
 		]
 	},
 	"preview_on_click": false,
 	"rulers":
 	[
-		80,
 		120,
 		160,
 		200
 	],
 	"rust_syntax_checking": true,
-	"save_on_focus_lost": true,
+	"save_on_focus_lost": false,
 	"shift_tab_unindent": true,
 	"show_encoding": true,
 	"show_markers_on_untracked_file": true,
-	"sidebar_font_big": false,
+	"sidebar_font_big": true,
 	"sidebar_font_small": false,
-	"sidebar_large": false,
+	"sidebar_large": true,
 	"sidebar_medium": true,
 	"sidebar_xlarge": false,
 	"tab_size": 4,

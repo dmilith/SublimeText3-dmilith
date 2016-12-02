@@ -1,3 +1,24 @@
 {
-
+	"extensions":
+	[
+		"rs"
+	],
+	"rust_linter_enabled": true,
+	"rust_syntax_error_color": "FF0000",
+	"rust_syntax_warning_color": "AA9010",
+	
+	// "on_post_save_user":
+	// [
+	// 	{
+	// 		"args":
+	// 		{
+	// 			"cmd":
+	// 			[
+	// 				"/Software/Rust/bin/rustc-subl-lint"
+	// 			]
+	// 		},
+	// 		"command": "exec",
+	// 		"scope": "window"
+	// 	}
+	// ]
 }

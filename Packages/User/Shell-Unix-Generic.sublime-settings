@@ -1,4 +1,5 @@
 {
+	"tab_size": 4,
 	"extensions":
 	[
 		"def",
@@ -11,5 +12,4 @@
 		"build-binary-snapshots",
 		"served"
 	],
-	"tab_size": 4
 }

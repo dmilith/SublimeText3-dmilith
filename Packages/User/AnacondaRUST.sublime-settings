@@ -32,7 +32,7 @@
         Note: if this setting is left empty Anaconda will tr to use
         the environment variable RUST_SRC_PATH
     */
-    "rust_src_path": "/Projects/rust/src",
+    "rust_src_path": "/Projects/rust/src/",
 
     /*
         Set this to false if you don't want anaconda to format

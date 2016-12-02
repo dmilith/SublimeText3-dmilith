@@ -1,5 +1,0 @@
-{
-  "cmd": ["/Users/dmilith/Library/Haskell/bin/cabal build --ghc-options='-w -O0 -threaded -hidir o0 -odir o0'"],  // append lib:myPackage or myexecutable here to only build certain cabal targets
-  "shell": true,
-  "file_regex": "^(\\S*?):(\\d+):(\\d+):$"  // this matches the output of ghc
-}

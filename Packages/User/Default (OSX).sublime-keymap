@@ -1,4 +1,10 @@
 [
+  {
+    "command": "rust_goto",
+    "keys": ["super+shift+e"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+      ]
+},
   { "keys": ["escape"], "command": "hide_panel", "context":
     [
       { "key": "panel_visible", "operator": "equal", "operand": true }
@@ -89,7 +95,14 @@
        "context": [
          { "key": "overlay_visible" },
          { "key": "file_history_overlay_visible" }
-     ]}
+     ]},
+
+
+  { "keys": ["ctrl+super+l"], "command": "sublimelinter_lint" },
+  { "keys": ["ctrl+super+e"], "command": "sublimelinter_goto_error", "args": {"direction": "next"} },
+  { "keys": ["ctrl+super+c"], "command": "sublimelinter_goto_error", "args": {"direction": "previous"} },
+  { "keys": ["super+b"], "command": "sublimelinter_show_all_errors" },
+  { "keys": ["ctrl+super+t"], "command": "sublimelinter_toggle_linter", "args": {"which": "all"}}
 
 ]
 
