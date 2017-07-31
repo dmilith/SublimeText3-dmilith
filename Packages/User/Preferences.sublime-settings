@@ -1,5 +1,6 @@
 {
-	"animation_enabled": false,
+	"use_auto_start_localserver": 1,
+	"animation_enabled": true,
 	"atomic_save": true,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": false,
@@ -26,11 +27,11 @@
 		"*.ko"
 	],
 	"bold_folder_labels": true,
-	"caret_extra_bottom": 4,
-	"caret_extra_top": 3,
-	"caret_extra_width": 1,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 1,
+	"caret_extra_width": 2,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/SublimeLinter/Dmilith (SL).tmTheme",
+	"color_scheme": "Packages/User/Dmilith.tmTheme",
 	"copy_on_mouse_select": true,
 	"default_encoding": "UTF-8",
 	"default_line_ending": "unix",
@@ -89,7 +90,8 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 18.5,
+	"font_size": 18,
+	"getenv_command": false,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
 	"highlight_line": true,
@@ -97,7 +99,6 @@
 	"ignore_whitespace": "",
 	"ignored_packages":
 	[
-		"Rust",
 		"Vintage",
 		"Vintageex"
 	],
@@ -131,7 +132,6 @@
 		160,
 		200
 	],
-	"rust_syntax_checking": true,
 	"save_on_focus_lost": false,
 	"shift_tab_unindent": true,
 	"show_encoding": true,

@@ -1,174 +1,270 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.1,
-        "error_color": "E02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Danish Royalty/Danish Royalty.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "background",
-        "linters": {
-            "annotations": {
-                "@disable": false,
-                "args": [],
-                "errors": [
-                    "FIXME",
-                    "CRIT",
-                    "FAIL"
-                ],
-                "excludes": [],
-                "warnings": [
-                    "README",
-                    "TODO",
-                    "XXX"
-                ]
-            },
-            "clang": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "extra_flags": "",
-                "include_dirs": []
-            },
-            "elixirc": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "include_dirs": [],
-                "mix": false,
-                "pa": []
-            },
-            "elixirlinter": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "flake8": {
-                "@disable": false,
-                "args": [],
-                "builtins": "",
-                "excludes": [
-                    "F401",
-                    "E303",
-                    "E114",
-                    "E116"
-                ],
-                "executable": "",
-                "ignore": "",
-                "jobs": "2",
-                "max-complexity": -1,
-                "max-line-length": 160,
-                "select": "",
-                "show-code": true
-            },
-            "jscs": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "json": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "strict": true
-            },
-            "mypy": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
-            "pep8": {
-                "@disable": false,
-                "args": [],
-                "excludes": [
-                    "F401",
-                    "E303",
-                    "E114",
-                    "E116"
-                ],
-                "ignore": "",
-                "max-line-length": 160,
-                "select": ""
-            },
-            "pyflakes": {
-                "@disable": false,
-                "args": [],
-                "excludes": [
-                    "F401",
-                    "E303",
-                    "E114",
-                    "E116"
-                ]
-            },
-            "pyyaml": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "rust": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "shellcheck": {
-                "@disable": false,
-                "args": [
-                    "--shell=sh",
-                    "--color=never",
-                    "--exclude=SC2034,SC1090,SC1091,SC2164,SC2181",
-                ],
-                "exclude": "",
-                "excludes": []
-            },
-            "sublimesyntax": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "xmllint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            }
-        },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": true,
-        "paths": {
-            "linux": [],
-            "osx": [
-                "/Software/Rust/exports",
-                "/Software/Shellcheck/exports",
-                "/Software/Elixir/exports",
-                "/Software/Ctags/exports",
-                "/Library/Frameworks/Python.framework/Versions/3.5/bin",
-                "/usr/local/bin",
-            ],
-            "windows": []
-        },
-        "python_paths": {
-            "linux": [],
-            "osx": [
-                "/Library/Frameworks/Python.framework/Versions/3.5/bin",
-                "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages"
-            ],
-            "windows": []
-        },
-        "rc_search_limit": 2,
-        "shell_timeout": 5,
-        "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "cargo": "rust",
-            "html (django)": "html",
-            "html (rails)": "rhtml",
-            "html 5": "html",
-            "magicpython": "python",
-            "php": "html",
-            "python django": "python",
-            "pythonimproved": "python",
-            "rust enhanced": "rust"
-        },
-        "warning_color": "DDB700",
-        "wrap_find": true
-    }
+	"user":
+	{
+		"debug": false,
+		"delay": 0.1,
+		"error_color": "E02000",
+		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Danish Royalty/Danish Royalty.gutter-theme",
+		"gutter_theme_excludes":
+		[
+		],
+		"lint_mode": "background",
+		"linters":
+		{
+			"annotations":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"errors":
+				[
+					"FIXME",
+					"CRIT",
+					"FAIL"
+				],
+				"excludes":
+				[
+				],
+				"warnings":
+				[
+					"README",
+					"TODO",
+					"XXX"
+				]
+			},
+			"clang":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"extra_flags": "",
+				"include_dirs":
+				[
+				]
+			},
+			"elixirc":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"include_dirs":
+				[
+				],
+				"mix": false,
+				"pa":
+				[
+				]
+			},
+			"elixirlinter":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"flake8":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"builtins": "",
+				"excludes":
+				[
+					"F401",
+					"E303",
+					"E114",
+					"E116"
+				],
+				"executable": "",
+				"ignore": "",
+				"jobs": "2",
+				"max-complexity": -1,
+				"max-line-length": 160,
+				"select": "",
+				"show-code": true
+			},
+			"jscs":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"json":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"strict": true
+			},
+			"mypy":
+			{
+				"@disable": true,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"pep8":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+					"F401",
+					"E303",
+					"E114",
+					"E116"
+				],
+				"ignore": "",
+				"max-line-length": 160,
+				"select": ""
+			},
+			"pyflakes":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+					"F401",
+					"E303",
+					"E114",
+					"E116"
+				]
+			},
+			"pyyaml":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"rust":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"shellcheck":
+			{
+				"@disable": false,
+				"args":
+				[
+					"--shell=sh",
+					"--color=never",
+					"--exclude=SC2034,SC1090,SC1091,SC2164,SC2181"
+				],
+				"exclude": "",
+				"excludes":
+				[
+				]
+			},
+			"sublimesyntax":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"xmllint":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			}
+		},
+		"mark_style": "outline",
+		"no_column_highlights_line": false,
+		"passive_warnings": true,
+		"paths":
+		{
+			"linux":
+			[
+			],
+			"osx":
+			[
+				"/Software/Rust/exports",
+				"/Software/Shellcheck/exports",
+				"/Software/Elixir/exports",
+				"/Software/Ctags/exports",
+				"/Library/Frameworks/Python.framework/Versions/3.5/bin",
+				"/usr/local/bin"
+			],
+			"windows":
+			[
+			]
+		},
+		"python_paths":
+		{
+			"linux":
+			[
+			],
+			"osx":
+			[
+				"/Library/Frameworks/Python.framework/Versions/3.5/bin",
+				"/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages"
+			],
+			"windows":
+			[
+			]
+		},
+		"rc_search_limit": 2,
+		"shell_timeout": 5,
+		"show_errors_on_save": false,
+		"show_marks_in_minimap": true,
+		"syntax_map":
+		{
+			"cargo": "rust",
+			"html (django)": "html",
+			"html (rails)": "rhtml",
+			"html 5": "html",
+			"magicpython": "python",
+			"php": "html",
+			"python django": "python",
+			"pythonimproved": "python",
+			"rust enhanced": "rust"
+		},
+		"warning_color": "DDB700",
+		"wrap_find": true
+	}
 }

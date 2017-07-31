@@ -1,0 +1,6 @@
+{
+	"HMAC": "52qcciOyygpXOZDFIUCoXw==",
+    "use_auto_start_localserver": 1,
+    "languages": ["rust", "elixir", "erlang", "ocaml"],
+    "ycmd_path": "/Projects/ycmd/ycmd",
+}

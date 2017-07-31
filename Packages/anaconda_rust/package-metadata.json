@@ -1,1 +1,0 @@
-{"dependencies": [], "version": "0.2.8", "description": "Anaconda Rust offers auto completion, auto formatting and linting for Rust language that will never freeze your Sublime Text 3", "platforms": ["*"], "url": "https://github.com/DamnWidget/anaconda_rust", "sublime_text": ">=3000"}

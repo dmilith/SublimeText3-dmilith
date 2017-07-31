@@ -1,5 +1,5 @@
 {
   "rustfmt": "/Software/Rust/bin/rustfmt",
-  "run_on_save": true,
+  "run_on_save": false,
   "show_errors": true,
 }
