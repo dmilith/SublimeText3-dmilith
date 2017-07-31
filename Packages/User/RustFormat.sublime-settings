@@ -1,4 +1,4 @@
 {
 	"rust_format_binary": "/Software/Rust/exports/rustfmt",
-	"rust_format_on_save": true
+	"rust_format_on_save": false
 }
