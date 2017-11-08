@@ -9,6 +9,7 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
+		"All Autocomplete",
 		"BeautifyRust",
 		"Color Highlighter",
 		"CTags",
@@ -20,6 +21,7 @@
 		"Git Config",
 		"GitGutter",
 		"Hooks",
+		"IcedCoffeeScript",
 		"Indent XML",
 		"INI",
 		"Markdown Preview",
