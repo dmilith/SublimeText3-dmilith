@@ -1,7 +1,7 @@
 {
     "user": {
         "debug": false,
-        "delay": 0.1,
+        "delay": 0.2,
         "error_color": "E02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Danish Royalty/Danish Royalty.gutter-theme",
         "gutter_theme_excludes": [],
@@ -19,6 +19,7 @@
                 "warnings": [
                     "README",
                     "TODO",
+                    "HACK",
                     "XXX"
                 ]
             },
@@ -38,12 +39,12 @@
                 "pa": []
             },
             "elixirlinter": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
             "flake8": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "builtins": "",
                 "excludes": [
@@ -77,7 +78,7 @@
                 "excludes": []
             },
             "pep8": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": [
                     "F401",
@@ -90,7 +91,7 @@
                 "select": ""
             },
             "pyflakes": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": [
                     "F401",
@@ -100,14 +101,18 @@
                 ]
             },
             "pyyaml": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
             "rust": {
                 "@disable": false,
                 "args": [],
-                "excludes": []
+                "crate-root": "main.rs",
+                "excludes": [],
+                "use-cargo": true,
+                "use-cargo-check": true,
+                "use-crate-root": false
             },
             "shellcheck": {
                 "@disable": false,
@@ -125,7 +130,7 @@
                 "excludes": []
             },
             "xmllint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             }
@@ -137,6 +142,7 @@
             "linux": [],
             "osx": [
                 "/Software/Rust/exports",
+                "/Services/Rust/exports",
                 "/Software/Shellcheck/exports",
                 "/Software/Elixir/exports",
                 "/Software/Ctags/exports",
@@ -155,7 +161,7 @@
         },
         "rc_search_limit": 2,
         "shell_timeout": 5,
-        "show_errors_on_save": false,
+        "show_errors_on_save": true,
         "show_marks_in_minimap": true,
         "syntax_map": {
             "cargo": "rust",
@@ -171,7 +177,8 @@
         "tooltip_fontsize": "1rem",
         "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
         "tooltip_theme_excludes": [],
-        "tooltips": false,
+        "tooltips": true,
+        "use_current_shell_path": false,
         "warning_color": "DDB700",
         "wrap_find": true
     }

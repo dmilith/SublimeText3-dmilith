@@ -10,7 +10,6 @@
 	[
 		"AdvancedNewFile",
 		"All Autocomplete",
-		"BeautifyRust",
 		"Color Highlighter",
 		"CTags",
 		"DashDoc",
@@ -29,8 +28,7 @@
 		"Package Control",
 		"Request",
 		"Rust Enhanced",
-		"RustAutoComplete",
-		"RustFormat",
+		"SideBarEnhancements",
 		"SSH Config",
 		"SublimeLinter",
 		"SublimeLinter-annotations",

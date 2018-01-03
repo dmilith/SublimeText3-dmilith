@@ -1,5 +1,5 @@
 {
-	"animation_enabled": true,
+	"animation_enabled": false,
 	"atomic_save": false,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": false,
@@ -61,7 +61,8 @@
 		"*.class",
 		"*.psd",
 		"*.db",
-		"*.sublime-workspace"
+		"*.sublime-workspace",
+		"tmp*"
 	],
 	"folder_exclude_patterns":
 	[
@@ -83,7 +84,7 @@
 		"subpixel_antialias",
 		"no_round"
 	],
-	"font_size": 13,
+	"font_size": 16,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
@@ -109,11 +110,13 @@
 		"*":
 		[
 			"/Software/Rust/exports",
+			"/Services/Rust/exports",
 			"/Software/Shellcheck/exports",
 			"/Software/Elixir/exports",
 			"/Software/Ctags/exports",
 			"/Software/Git/exports",
 			"/Software/Zsh/exports",
+			"/Software/ImageMagick/exports",
 			"/Library/Frameworks/Python.framework/Versions/3.5/bin",
 			"/usr/local/bin",
 			"/usr/bin",
@@ -123,10 +126,10 @@
 	"preview_on_click": false,
 	"rulers":
 	[
-		120,
 		160,
 		200
 	],
+	"rust_src_path": "/Projects/rust/src",
 	"save_on_focus_lost": false,
 	"shift_tab_unindent": true,
 	"show_encoding": true,

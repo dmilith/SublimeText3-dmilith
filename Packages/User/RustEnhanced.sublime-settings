@@ -1,14 +1,24 @@
 {
+	"cargo_build":
+	{
+		"defaults":
+		{
+			"env":
+			{
+				"RUST_BACKTRACE": 0,
+				"RUST_SRC_PATH": "/Projects/rust/src"
+			}
+		}
+	},
 	"extensions":
 	[
 		"rs"
 	],
 	"rust_include_shell_env": true,
-	"rust_phantom_style": "normal",
 	"rust_region_style": "outline",
+	"rust_phantom_style": "normal",
 	"rust_syntax_checking": true,
 	"rust_syntax_checking_include_tests": true,
-	"rust_syntax_checking_method": "check",
 	"rust_syntax_error_color": "#F00",
 	"rust_syntax_hide_warnings": false,
 	"rust_syntax_warning_color": "#FF0"

@@ -1,8 +1,9 @@
 
 # SuperElixir
 
-This is a sublime plug-in that provide IDE like capabilities to sublime when working with the Elixir language. It does not include the syntax highlighting, please install ()[]
+This is a sublime plug-in that provide IDE like capabilities to sublime when working with the Elixir language. It does not include the syntax highlighting, please install the package [Elixir](https://packagecontrol.io/packages/Elixir)
 
+**[Donate for the cause](https://www.paypal.me/EddydelValle/5)**
 
 ## Features
 
@@ -29,7 +30,7 @@ Additional info installations you can find here [http://wbond.net/sublime_packag
 
 ## Configuration
 
-Make sure you have at least Elixir 2.4.4 installed.
+Make sure you have at least Elixir 1.4.4 installed.
 
 ### Elixir interpreter settings
 
@@ -76,7 +77,7 @@ set (additionally to the trigger above):
 
 Find function / variable / module definition / anything else.
 
-Shortcuts: `CTRL+SHIFT+G`
+Shortcut: `CTRL+SHIFT+G`
 
 Mouse binding, was disabled, because sublime does not allows to set a scope so is active just in Elixir source files, and this can interfere with the global SublimeText configuration. But, if you want to use your mouse you can bind `CTRL + LeftMouseButton`:
 
@@ -94,7 +95,7 @@ Mouse binding, was disabled, because sublime does not allows to set a scope so i
 
 As Elixir code is structured as a set of hierarchical modules this feature lists all loaded modules and allows you to select one of them an go to it.
 
-Shortcuts: `CTRL+ALT+M`
+Shortcut: `CTRL+ALT+M`
 
 #### Show types and documentation
 
@@ -103,15 +104,15 @@ Just put your mouse on top of the term and you want documentation about. If it i
 
 ## Special thanks
 
-- Elixir Sense: provides the Elixir introspection capabilities.
-- PyErlang: allows the plug-in to talk to Elixir Sense.
-- Sublime Jedi: provides the Python to do the go to definition in Sublime.
-- Elixir Linting: provides most of the code for linting.
-- Sublime Elixir: provides some helper functions to put all together.
+- [Elixir Sense](https://github.com/msaraiva/elixir_sense): provides the Elixir introspection capabilities.
+- [PyErlang](https://github.com/okeuday/erlang_py): allows the plug-in to talk to Elixir Sense.
+- [Sublime Jedi](https://github.com/srusskih/SublimeJEDI): provides the Python to do the go to definition in Sublime.
+- [Elixir Linting](https://github.com/smanolloff/SublimeLinter-contrib-elixirc): provides most of the code for linting.
+- [Sublime Elixir](https://github.com/vishnevskiy/ElixirSublime): provides some helper functions to put all together.
 
 ## Room for improvement
 
-- How documentation is shown. Right now is just shown in plain text and is kind of ugly, I think we should  use a markdown renderer for Sublime like [Sublime Markdown Popups](https://github.com/facelessuser/sublime-markdown-popups/).
+- How documentation is shown. Right now is just shown in plain text and is kind of ugly, I think we should  use a markdown renderer for Sublime like [Sublime Markdown Pop-ups](https://github.com/facelessuser/sublime-markdown-popups/).
 - Improve the linting, so it just does not work on safe but in real-time typing.
 - When sublime includes scopes in mouse map maybe we can have Ctrl-Click to go to definitions.
 - Support Windows. Right now the communication with Elixir Sense is over Unix sockets; and Windows can't do that. But.. who writes Elixir in Windows any way? :trollface:

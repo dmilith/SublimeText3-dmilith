@@ -1,9 +1,9 @@
-{
-	"extensions":
-	[
-		"rs"
-	],
-	"rust_linter_enabled": true,
-	"rust_syntax_error_color": "FF0000",
-	"rust_syntax_warning_color": "AA9010"
-}
+// {
+// 	"extensions":
+// 	[
+// 		"rs"
+// 	],
+// 	"rust_linter_enabled": true,
+// 	"rust_syntax_error_color": "FF0000",
+// 	"rust_syntax_warning_color": "AA9010"
+// }
