@@ -94,7 +94,8 @@
 	"ignored_packages":
 	[
 		"Vintage",
-		"Vintageex"
+		"Vintageex",
+		"YcmdCompletion"
 	],
 	"indent_guide_options":
 	[
