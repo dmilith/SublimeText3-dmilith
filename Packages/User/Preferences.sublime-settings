@@ -136,6 +136,8 @@
 		"*":
 		[
 			"/Users/dmilith/.cargo/bin",
+			"/Software/Graphicsmagick/exports",
+			"/Software/ImageMagick/exports",
 			"/Software/Rust/exports",
 			"/Services/Rust/exports",
 			"/Software/Shellcheck/exports",
@@ -143,7 +145,6 @@
 			"/Software/Ctags/exports",
 			"/Software/Git/exports",
 			"/Software/Zsh/exports",
-			"/Software/ImageMagick/exports",
 			"/Library/Frameworks/Python.framework/Versions/3.5/bin",
 			"/usr/local/bin",
 			"/usr/bin",
@@ -153,8 +154,7 @@
 	"preview_on_click": false,
 	"rulers":
 	[
-		160,
-		200
+		180
 	],
 	"save_on_focus_lost": false,
 	"shift_tab_unindent": true,
