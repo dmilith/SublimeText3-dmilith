@@ -119,7 +119,7 @@
                 "args": [
                     "--shell=sh",
                     "--color=never",
-                    "--exclude=SC2034,SC1090,SC1091,SC2164,SC2181,SC2154"
+                    "--exclude=SC2034,SC1090,SC1091,SC2164,SC2181,SC2154,SC2004,SC2016"
                 ],
                 "exclude": "",
                 "excludes": []
@@ -141,6 +141,7 @@
         "paths": {
             "linux": [],
             "osx": [
+                "/Users/dmilith/.cargo/bin",
                 "/Software/Rust/exports",
                 "/Services/Rust/exports",
                 "/Software/Shellcheck/exports",
@@ -165,6 +166,7 @@
         "show_marks_in_minimap": true,
         "syntax_map": {
             "cargo": "rust",
+            "facts": "shell",
             "html (django)": "html",
             "html (rails)": "rhtml",
             "html 5": "html",
@@ -172,13 +174,14 @@
             "php": "html",
             "python django": "python",
             "pythonimproved": "python",
-            "rust enhanced": "rust"
+            "rust enhanced": "rust",
+            "task": "shell"
         },
-        "tooltip_fontsize": "1rem",
-        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+        "tooltip_fontsize": "0.36rem",
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Inline/Inline.tooltip-theme",
         "tooltip_theme_excludes": [],
         "tooltips": true,
-        "use_current_shell_path": false,
+        "use_current_shell_path": true,
         "warning_color": "DDB700",
         "wrap_find": true
     }
