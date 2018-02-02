@@ -24,8 +24,8 @@
 		"*.zip"
 	],
 	"bold_folder_labels": true,
-	"caret_extra_bottom": 1,
-	"caret_extra_top": 1,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
 	"color_scheme": "Packages/User/Dmilith.tmTheme",
@@ -34,7 +34,7 @@
 	"default_line_ending": "unix",
 	"detect_slow_plugins": true,
 	"draw_centered": false,
-	"draw_indent_guides": true,
+	"draw_indent_guides": false,
 	"draw_white_space": "all",
 	"enable_telemetry": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -76,7 +76,8 @@
 		"target",
 		"deps",
 		"_build",
-		".idea"
+		".idea",
+		"lib"
 	],
 	"font_face": "Monaco",
 	"font_options":
@@ -84,7 +85,7 @@
 		"subpixel_antialias",
 		"no_round"
 	],
-	"font_size": 16,
+	"font_size": 13,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
@@ -93,6 +94,30 @@
 	"ignore_whitespace": "",
 	"ignored_packages":
 	[
+		"ActionScript",
+		"AppleScript",
+		"ASP",
+		"Batch File",
+		"C#",
+		"Clojure",
+		"Color Scheme - Default",
+		"Color Scheme - Legacy",
+		"D",
+		"Go",
+		"Graphviz",
+		"Groovy",
+		"Haskell",
+		"Java",
+		"LaTeX",
+		"Lua",
+		"Matlab",
+		"Objective-C",
+		"R",
+		"Rust",
+		"Scala",
+		"TCL",
+		"Textile",
+		"Theme - Default",
 		"Vintage",
 		"Vintageex",
 		"YcmdCompletion"
@@ -110,6 +135,7 @@
 	{
 		"*":
 		[
+			"/Users/dmilith/.cargo/bin",
 			"/Software/Rust/exports",
 			"/Services/Rust/exports",
 			"/Software/Shellcheck/exports",
