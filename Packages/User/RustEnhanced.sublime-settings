@@ -1,4 +1,21 @@
 {
+	"auto_complete_selector": "source - (comment, string.quoted)",
+	"auto_complete_triggers":
+	[
+		{
+			"characters": ".",
+			"selector": "source.rust"
+		},
+		{
+			"characters": "::",
+			"selector": "source.rust"
+		}
+	],
+	"extensions":
+	[
+		"rs",
+		"rs"
+	],
 	"rust_gutter_style": "circle",
 	"rust_include_shell_env": true,
 	"rust_phantom_style": "normal",
