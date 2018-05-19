@@ -1,6 +1,6 @@
 {
   // Custom path to git binary when not in PATH
-  "git_binary": "/Applications/Personal/Tower.app/Contents/Resources/git/bin/git",
+  "git_binary": "/usr/bin/git",
 
   // Live mode evaluates changes every time file is modified,
   // Set false to disable evaluation after each input
