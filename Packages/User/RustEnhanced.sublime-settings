@@ -13,7 +13,6 @@
 	],
 	"extensions":
 	[
-		"rs",
 		"rs"
 	],
 	"rust_gutter_style": "circle",
