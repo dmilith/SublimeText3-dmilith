@@ -1,15 +1,28 @@
 {
+	"auto_complete_selector": "source - (comment, string.quoted)",
+	"auto_complete_triggers":
+	[
+		{
+			"characters": ".",
+			"selector": "source.rust"
+		},
+		{
+			"characters": "::",
+			"selector": "source.rust"
+		}
+	],
 	"extensions":
 	[
+		"rs",
 		"rs"
 	],
+	"rust_gutter_style": "circle",
 	"rust_include_shell_env": true,
 	"rust_phantom_style": "normal",
 	"rust_region_style": "outline",
 	"rust_syntax_checking": true,
 	"rust_syntax_checking_include_tests": true,
-	"rust_syntax_checking_method": "check",
 	"rust_syntax_error_color": "#F00",
 	"rust_syntax_hide_warnings": false,
-	"rust_syntax_warning_color": "#FF0"
+	"rust_syntax_warning_color": "#FB2"
 }

@@ -1,4 +1,7 @@
 defmodule ElixirSense.Core.Parser do
+  @moduledoc """
+  Core Parser
+  """
 
   alias ElixirSense.Core.MetadataBuilder
   alias ElixirSense.Core.Metadata
@@ -60,7 +63,7 @@ defmodule ElixirSense.Core.Parser do
   end
 
   defp fix_parse_error(source, _cursor_line_number, {:error, {_line, {_error_type, text}, _token}}) do
-    [_, line] = Regex.run(~r/line\s(\d+)/, text)
+    [_, line] = Regex.run(Regex.recompile!(~r/line\s(\d+)/), text)
     line = line |> String.to_integer
     source
     |> replace_line_with_marker(line)
@@ -93,7 +96,7 @@ defmodule ElixirSense.Core.Parser do
     # IO.puts :stderr, "REPLACING LINE: #{line}"
     source
     |> String.split(["\n", "\r\n"])
-    |> List.replace_at(line-1, "(__atom_elixir_marker_#{line}__())")
+    |> List.replace_at(line - 1, "(__atom_elixir_marker_#{line}__())")
     |> Enum.join("\n")
   end
 

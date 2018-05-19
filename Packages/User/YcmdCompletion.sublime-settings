@@ -1,6 +1,9 @@
 {
 	"HMAC": "52qcciOyygpXOZDFIUCoXw==",
     "use_auto_start_localserver": 1,
-    "languages": ["rust", "erlang", "ocaml", "elixir"],
     "ycmd_path": "/Projects/ycmd/ycmd",
+    "languages": ["rust", "elixir"],
+    "racerd_binary_path": "/Services/Rust/exports/racerd",
+    "rust_src_path": "/Projects/rust/src",
+    "max_diagnostics_to_display": 5
 }
