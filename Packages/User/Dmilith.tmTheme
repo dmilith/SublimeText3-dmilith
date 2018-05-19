@@ -254,6 +254,19 @@
             </dict>
             <dict>
                 <key>name</key>
+                <string>Variable Function</string>
+                <key>scope</key>
+                <string>variable.function</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string/>
+                    <key>foreground</key>
+                    <string>#E5D6FF</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
                 <string>Ruby Instance Variable</string>
                 <key>scope</key>
                 <string>variable.other.readwrite.instance.ruby</string>
@@ -367,6 +380,19 @@
                     <string>regular</string>
                     <key>foreground</key>
                     <string>#BF90F1</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Variable other readwrite assignment</string>
+                <key>scope</key>
+                <string>variable.other.readwrite.assignment</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string>regular</string>
+                    <key>foreground</key>
+                    <string>#BBC0F1</string>
                 </dict>
             </dict>
             <dict>
@@ -545,7 +571,7 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>Scala punctuation (dmilith)</string>
+                <string>Punctuation (dmilith)</string>
                 <key>scope</key>
                 <string>punctuation.definition</string>
                 <key>settings</key>
@@ -558,7 +584,46 @@
             </dict>
             <dict>
                 <key>name</key>
-                <string>Scala punctuation signs (dmilith)</string>
+                <string>Punctuation section</string>
+                <key>scope</key>
+                <string>punctuation.section</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string/>
+                    <key>foreground</key>
+                    <string>#32F700</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Punctuation compound</string>
+                <key>scope</key>
+                <string>punctuation.definition.compound</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string/>
+                    <key>foreground</key>
+                    <string>#119700</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Punctuation parameter</string>
+                <key>scope</key>
+                <string>punctuation.definition.parameter</string>
+                <key>settings</key>
+                <dict>
+                    <key>fontStyle</key>
+                    <string/>
+                    <key>foreground</key>
+                    <string>#198700</string>
+                </dict>
+            </dict>
+            <dict>
+                <key>name</key>
+                <string>Punctuation signs (dmilith)</string>
                 <key>scope</key>
                 <string>punctuation.definition.comment.scala</string>
                 <key>settings</key>
