@@ -1,0 +1,34 @@
+
+# vim swap files
+.*.sw[a-z]
+
+# vim temporary
+*~
+
+# haskell's junk
+dist
+cabal-dev
+*.hi
+*.o
+
+#python's junk
+*.pyc
+__pycache__/
+
+#util
+*.exe
+*.cache
+
+# logs
+*.log
+.build
+
+# misc stuff
+pylint.out
+
+# ST3 stuff
+subhask.sublime-workspace
+
+# Documentation stuff
+*.html
+Messages/*.html

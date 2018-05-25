@@ -1,0 +1,21 @@
+{
+  "folders":
+  [
+    {
+      "path": "."
+    }
+  ],
+  "SublimeLinter":
+  {
+    "@python": 3,
+    "linters": {
+      "pylint" : {
+	    "paths": [ "${sublime}",
+                 "${project}",
+                 "${project}/..",
+                 "/Applications/Sublime Text.app/Contents/MacOS/"
+               ]
+      }
+    }
+  }
+}

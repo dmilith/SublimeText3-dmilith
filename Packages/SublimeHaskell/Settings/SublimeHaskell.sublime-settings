@@ -1,0 +1,323 @@
+{
+    // Enable auto completion of module imports
+    "auto_complete_imports": true,
+
+    // Enable auto completion of LANGUAGE pragmas
+    "auto_complete_language_pragmas": true,
+
+    // Enable auto build project on save
+    "enable_auto_build": false,
+
+    // Haskell build system. Choices are:
+    //
+    // "cabal": Use cabal to build projects
+    // "cabal-new-build": Use the new cabal build system
+    // "stack" Use stack to build projects
+    //
+    // Ideally, you should put your default preference in your User preferences.
+    //
+    // May be set on a per-project basis in SublimeHaskell project settings.
+    "haskell_build_tool": "stack",
+
+    // Enable auto check on save
+    "enable_auto_check": true,
+
+    // Enable auto lint on save (as hints when building)
+    "enable_auto_lint": true,
+
+    // Show only: Limit what compiler or backend messages get marked or displayed
+    "show_only": {
+        "errors": true,
+        "warnings": true,
+        "hints": true
+    },
+
+    // How to build the cabal project in order to obtain error messages.
+    // This option exists because `cabal build` is slow and cannot re-print
+    // warnings of already compiled modules.
+    //
+    // (Also see https://github.com/haskell/cabal/issues/1179, cabal 1.16).
+    //
+    // Possible values:
+    //
+    // - "normal": A normal build using the haskell_build_tool builder. This is
+    //   a full build of the project.
+    //
+    // - "normal-then-warnings": A normal build that also collects project-wide
+    //   warnings. This runs the builder tool twice.
+    //
+    // - "normal-then-test": A normal build that runs tests after a successful
+    //   build.
+    //
+    // - "normal-then-bench": A normal build that runs benchmarks after a
+    //   successful build.
+    //
+    // - "typecheck": Performs a type check of the whole project, trying to not
+    //   do any more than necesssary to give faster feedback. Consider turning
+    //   auto-build off and enable auto-check instead.
+    //
+    // - "typecheck-then-warnings": Like "typecheck", but afterwards collects
+    //    warnings like "normal-then-warnings".
+    //
+    // Please note that it is currently impossible to properly use a `-fno-code`
+    // build on a cabal project that links a shared library; it errors too early.
+    // (https://github.com/haskell/cabal/issues/1176, cabal 1.16).
+    //
+    // This can be a project-specific setting (see per-project settings at the end
+    // of this document.)
+    "auto_build_mode": "normal-then-warnings",
+
+    // Use the improved/alternate Haskell syntax?
+    //
+    // SublimeHaskell ships with an improved/alternate syntax highlighter. If this setting
+    // 'true', Haskell files will use the new highlighter. If false, Haskell files will
+    // revert to the Haskell highlighter shipped with ST.
+    "use_improved_syntax": true,
+
+    // Show output window on clean/configure/build/install:
+    "show_output_window": true,
+
+    // Show error window on build/check/lint:
+    "show_error_window": true,
+
+    // Add the "standard" directories where cabal and stack install executables,
+    // if they exist, in the following order (top to bottom):
+    //
+    // stack's install dir
+    // user bindir from $HOME/.cabal/config (*nix) or  %APPDATA%/cabal/config (WinXX)
+    // global bindir from $HOME/.cabal/config (*nix) or %APPDATA%/cabal/config (WinXX)
+    //
+    // The defaults are:
+    //
+    // stack:  {$HOME/.local|%APPDATA%/local}/bin
+    // user:   {$HOME/.cabal|%APPDATA%/cabal}/bin
+    // global: {/usr/local|%PROGRAMFILES%/Haskell}/bin
+    "add_standard_dirs": true,
+
+    // Extra directories prepended to the PATH environment variable to
+    // supplement searching for various Haskell executables, such as ghc and
+    // stack.
+    //
+    // Note: You can use environment variables here, e.g., $HOME and %APPDATA%.
+    // Only "%something%" will work on Windows platforms. You can also use the
+    // tilde ("~") as an abbreviation for your home directory.
+    //
+    // If used in combination with "add_standard_dirs", PATH is:
+    //
+    //   [add_to_PATH directories] + [standard_dirs] + [PATH]
+    "add_to_PATH": [],
+
+
+    // Add word completions to the completions list. This consists of any word
+    // in the current document that is longer than 3 characters.
+    "add_word_completions": false,
+
+    // Add default completions from the Haskell.sublime-completions file. You can
+    // probably leave this setting false, unless you're using the "none" backend.
+    "add_default_completions": false,
+
+    // Auto autocompletion popup on '.' in import list
+    "auto_completion_popup": false,
+
+    // Additional ghc options for use in ghc-mod and ModuleInspector, for example "-package ghc"
+    "ghc_opts": [],
+
+    // Additional HLint options, usually to specify a customi[sz]ed 'hlint.yaml' rule spec.
+    "lint_opts:": [],
+
+    // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+    // Backend selection:
+    // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+
+    // The backend dictionary, whose structure is:
+    //
+    //  "name of backend": {
+    //    "default": true|false,             // Only one of your backends should be true. SublimeHaskell will use the first
+    //                                       // default backend it finds if there is more than one default backend.
+    //                                       // (remember: this is a dictionary, so it's not necessarily the one you think
+    //                                       // it should be.)
+    //    "backend": "hsdev|ghc-mod|none",   // Self explanatory
+    //    "options": {
+    //      // see below
+    //    }
+    //  }
+    //
+    // There are three backends: "hsdev", "ghc-mod" and "none".
+    //
+    // Options for hsdev:
+    //
+    //     port:        [default: "4567"]      TCP port where SublimeHaskell will connect to hsdev
+    //     host:        [defualt: "localhost"] Host name SublimeHaskell will connect to hsdev
+    //     local:       [default: true]        Should SublimeHaskell create a local hsdev server process? Specify false if you
+    //                                         want to connect to a remote hsdev server
+    //     exec-with:   [default: ""]          Should SublimeHaskell use "stack" or "cabal" to when starting
+    //                                         the hsdev executable?
+    //     install-dir: [default ""]           Used in conjunction with "exec-with"; this is the directory where SublimeHaskell
+    //                                         can find  the hsdev executable.
+    //
+    // There are no additional options for either the ghc-mod or none backends
+
+    "backends": {
+        "Local hsdev": {
+            "default": true,
+            "backend": "hsdev",
+            "options": {
+              "local": true,
+              "port": 4567
+            }
+        },
+        "ghc-mod": {
+            "default": false,
+            "backend": "ghc-mod"
+        },
+        "Remote hsdev@localhost:4567": {
+            "default": false,
+            "backend": "hsdev",
+            "options": {
+                "local": false,
+                "host": "localhost",
+                "port": 4567
+            }
+        },
+        "Cabal-sandboxed local hsdev": {
+            "default": false,
+            "backend": "hsdev",
+            "options": {
+              "local": true,
+              "port": 4567,
+              "exec-with": "cabal"
+              // ^^^^^^^^^^^^^^^^^ Remember to insert a comma (",") after this line once you set install-dir
+              // to hsdev's installation directory.
+              //
+              // Force a diagnostic message because this has to be set in conjunction with exec-with:
+              // "install-dir": "$HOME/totally/invalid/directory"
+            }
+        },
+        "Stack-exec local hsdev": {
+            "default": false,
+            "backend": "hsdev",
+            "options": {
+              "local": true,
+              "port": 4567,
+              "exec-with": "stack"
+              // ^^^^^^^^^^^^^^^^^ Remember to insert a comma (",") after this line once you set install-dir
+              // to hsdev's installation directory.
+              //
+              // Force a diagnostic message because this has to be set in conjunction with exec-with:
+              // "install-dir": "$HOME/totally/invalid/directory"
+            }
+        },
+        "Cabal new-build local hsdev": {
+            "default": false,
+            "backend": "hsdev",
+            "options": {
+              "port": 4567,
+              "exec-with": "cabal-new-build"
+              // ^^^^^^^^^^^^^^^^^ Remember to insert a comma (",") after this line once you set install-dir
+              // to hsdev's installation directory.
+              //
+              // Force a diagnostic message because this has to be set in conjunction with exec-with:
+              // "install-dir": "$HOME/totally/invalid/directory"
+            }
+        },
+        "No backend": {
+            "default": false,
+            "backend": "none"
+        }
+    },
+
+    // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+    // User interaction settings:
+    // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+
+    // lint & check on the fly
+    "lint_check_fly": false,
+
+    // idle time in seconds before lint & check on the fly
+    "lint_check_fly_idle": 5,
+
+    // Use unicode symbols info 'symbol info panel'
+    "unicode_symbol_info": true,
+
+    // Enable hdocs, disabled by default since 'hdocs' is not on hackage yet
+    // It can be manually installed from http://github.com/mvoidex/hdocs
+    "enable_hdocs": false,
+
+    // Enable inpecting modules with SublimeHaskell's ModuleInspector.
+    // Needed for autocompletion.
+    // This can take a lot of time in really big Haskell projects.
+    // Changing this requires a Sublime restart.
+    "inspect_modules": true,
+
+    // Additional ghc options for repl
+    "ghci_opts": [],
+
+    // Run a code indenter/prettyfier after save.
+    "prettify_on_save": false,
+    // The prettifier to use when indenting/prettifying on save. Valid options are "stylish-haskell" or "hindent"
+    "prettify_executable": "stylish-haskell",
+    // Option list for hindent
+    //
+    // NOTE: This is not a string. Having Python parse an option string will be suboptimal. Use a list of options
+    // instead, e.g., ['--foo', '--bar', '--baz']
+    "hindent_options": [],
+    // Option list for stylish-haskell
+    //
+    // NOTE: This is not a string. Having Python parse an option string will be suboptimal. Use a list of options
+    // instead, e.g., ['--foo', '--bar', '--baz']
+    "stylish_options": [],
+
+    // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+    // Logging verbosity
+    // ~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+
+    // Log level, 0 — no log, 1 — errors, 2 — warnings, 3 — info messages, 4 — debug, 5 — trace
+    "log": 1,
+
+    // hsdev logging output:
+    //
+    // !!!PAY ATTENTION TO YOUR HSDEV VERSION!!!
+    //
+    // hsdev version 0.2.2.0 and below: The "hsdev_log_config" preference controls hsdev's logging. It has several interesting
+    // values: 'use default' (somewhat verbose, informational), 'use silent' (quiet)
+    //
+    // hsdev version 0.2.3.0 and higher: The "hsdev_log_level" preference controls hsdev's logging. Valid values are
+    // 'trace', 'debug', 'info', 'warning', 'error' and 'fatal'.
+    "hsdev_log_config": "use silent",
+    "hsdev_log_level": "warning",
+
+    // Backend debugging flags/tokens: This is a list of tokens used for debugging the various SublimeHaskell components,
+    // inspired by hacking on the hsdev backend.
+    //
+    // "all_messages": Emit all messages (send and receive)
+    // "callbacks": Show interesting information about 'hsdev' callbacks
+    // "completions": Completion generator diagnostics and debug
+    // "event_viewer": Event handling dignostics and debug
+    // "fly_mode": Fly mode debugging
+    // "inspection": Source inspection debugging
+    // "recv_messages": Emit all received messages
+    // "send_messages": Emit all sent messages
+    // "socket_pool": Keep track of the socket pool avail/used sizes.
+    "component_debug": []
+
+    // SublimeHaskell per-project settings (or "things you can put in your .sublime-project file")
+    //
+    // - active_stack_config
+    // - auto_build_mode
+    // - haskell_build_tool
+    // - show_only
+    //
+    // Example:
+    // {
+    //   "folders":
+    //   [
+    //     {
+    //       "path": "."
+    //     }
+    //   ],
+    //   "SublimeHaskell": {
+    //     // SublimeHaskell project settings here:
+    //     "haskell_build_tool": "cabal-new-build"
+    //   }
+    // }
+}
