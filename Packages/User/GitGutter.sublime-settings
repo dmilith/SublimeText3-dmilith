@@ -35,9 +35,10 @@
   // against, how many lines have been inserted or modified and how many regions
   // have been deleted.
   // Set "all" to also show on what branch you are
-  "show_status": "default",
+  "show_status": "all",
 
   // Determines whether the git_gutter_next_change and git_gutter_prev_change
   // commands wrap around on reaching the beginning/ending of the file.
-  "next_prev_change_wrap": true
+  "next_prev_change_wrap": true,
+  "theme": "Inline.gitgutter-theme"
 }

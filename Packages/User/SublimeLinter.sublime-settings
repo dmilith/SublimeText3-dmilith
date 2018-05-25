@@ -1,188 +1,185 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.2,
-        "error_color": "E02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Circle/Circle.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "background",
-        "linters": {
-            "annotations": {
-                "@disable": false,
-                "args": [],
-                "errors": [
-                    "FIXME",
-                    "CRIT",
-                    "FAIL"
-                ],
-                "excludes": [],
-                "warnings": [
-                    "README",
-                    "TODO",
-                    "HACK",
-                    "XXX"
-                ]
-            },
-            "clang": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "extra_flags": "",
-                "include_dirs": []
-            },
-            "elixirc": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "include_dirs": [],
-                "mix": false,
-                "pa": []
-            },
-            "elixirlinter": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
-            "flake8": {
-                "@disable": true,
-                "args": [],
-                "builtins": "",
-                "excludes": [
-                    "F401",
-                    "E303",
-                    "E114",
-                    "E116"
-                ],
-                "executable": "",
-                "ignore": "",
-                "jobs": "2",
-                "max-complexity": -1,
-                "max-line-length": 160,
-                "select": "",
-                "show-code": true
-            },
-            "jscs": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "json": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "strict": true
-            },
-            "mypy": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
-            "pep8": {
-                "@disable": true,
-                "args": [],
-                "excludes": [
-                    "F401",
-                    "E303",
-                    "E114",
-                    "E116"
-                ],
-                "ignore": "",
-                "max-line-length": 160,
-                "select": ""
-            },
-            "pyflakes": {
-                "@disable": true,
-                "args": [],
-                "excludes": [
-                    "F401",
-                    "E303",
-                    "E114",
-                    "E116"
-                ]
-            },
-            "pyyaml": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
-            "rust": {
-                "@disable": true,
-                "args": [],
-                "crate-root": "main.rs",
-                "excludes": [],
-                "use-cargo": true,
-                "use-cargo-check": true,
-                "use-crate-root": false
-            },
-            "shellcheck": {
-                "@disable": false,
-                "args": [
-                    "--shell=sh",
-                    "--color=never",
-                    "--exclude=SC2034,SC1090,SC1091,SC2164,SC2181,SC2154,SC2004,SC2016"
-                ],
-                "exclude": "",
-                "excludes": []
-            },
-            "sublimesyntax": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "xmllint": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            }
-        },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": true,
-        "paths": {
-            "linux": [],
-            "osx": [
-                "/Users/dmilith/.cargo/bin",
-                "/Software/Rust/exports",
-                "/Services/Rust/exports",
-                "/Software/Shellcheck/exports",
-                "/Software/Elixir/exports",
-                "/Software/Ctags/exports",
-                "/Library/Frameworks/Python.framework/Versions/3.5/bin",
-                "/usr/local/bin"
+    "debug": false,
+    "delay": 0.1,
+    "gutter_theme": "Circle",
+    "lint_mode": "background",
+    "linters": {
+        "annotations": {
+            "@disable": false,
+            "args": [],
+            "errors": [
+                "FIXME",
+                "CRIT",
+                "FAIL"
             ],
-            "windows": []
+            "excludes": [],
+            "warnings": [
+                "README",
+                "TODO",
+                "HACK",
+                "XXX"
+            ]
         },
-        "python_paths": {
-            "linux": [],
-            "osx": [
-                "/Library/Frameworks/Python.framework/Versions/3.5/bin",
-                "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages"
+        "clang": {
+            "@disable": false,
+            "args": [],
+            "excludes": [],
+            "extra_flags": "",
+            "include_dirs": []
+        },
+        "elixirc": {
+            "@disable": false,
+            "args": [],
+            "excludes": [],
+            "include_dirs": [],
+            "mix": true,
+        },
+        "elixirlinter": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
+        },
+        "flake8": {
+            "@disable": true,
+            "args": [],
+            "builtins": "",
+            "excludes": [
+                "F401",
+                "E303",
+                "E114",
+                "E116"
             ],
-            "windows": []
+            "executable": "",
+            "ignore": "",
+            "jobs": "2",
+            "max-complexity": -1,
+            "max-line-length": 160,
+            "select": "",
+            "show-code": true
         },
-        "rc_search_limit": 2,
-        "shell_timeout": 5,
-        "show_errors_on_save": true,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "cargo": "rust",
-            "facts": "shell",
-            "html (django)": "html",
-            "html (rails)": "rhtml",
-            "html 5": "html",
-            "magicpython": "python",
-            "php": "html",
-            "python django": "python",
-            "pythonimproved": "python",
-            "rust enhanced": "rust",
-            "task": "shell"
+        "jscs": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
         },
-        "tooltip_fontsize": "0.36rem",
-        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Inline/Inline.tooltip-theme",
-        "tooltip_theme_excludes": [],
-        "tooltips": true,
-        "use_current_shell_path": true,
-        "warning_color": "DDB700",
-        "wrap_find": true
-    }
+        "json": {
+            "@disable": false,
+            "args": [],
+            "excludes": [],
+            "strict": true
+        },
+        "mypy": {
+            "@disable": true,
+            "args": [],
+            "excludes": []
+        },
+        "pep8": {
+            "@disable": true,
+            "args": [],
+            "excludes": [
+                "F401",
+                "E303",
+                "E114",
+                "E116"
+            ],
+            "ignore": "",
+            "max-line-length": 160,
+            "select": ""
+        },
+        "pyflakes": {
+            "@disable": true,
+            "args": [],
+            "excludes": [
+                "F401",
+                "E303",
+                "E114",
+                "E116"
+            ]
+        },
+        "pyyaml": {
+            "@disable": true,
+            "args": [],
+            "excludes": []
+        },
+        "rust": {
+            "@disable": true,
+            "args": [],
+            "crate-root": "main.rs",
+            "excludes": [],
+            "use-cargo": true,
+            "use-cargo-check": true,
+            "use-crate-root": false
+        },
+        "shellcheck": {
+            "@disable": false,
+            "args": [
+                "--shell=sh",
+                "--color=never",
+                "--exclude=SC2034,SC1090,SC1091,SC2164,SC2181,SC2154,SC2004,SC2016"
+            ],
+            "exclude": "",
+            "excludes": []
+        },
+        "sublimesyntax": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
+        },
+        "xmllint": {
+            "@disable": true,
+            "args": [],
+            "excludes": []
+        }
+    },
+    "paths": {
+        "linux": [],
+        "osx": [
+            "/Users/dmilith/.cargo/bin",
+            "/Software/Rust/exports",
+            "/Services/Rust/exports",
+            "/Software/Shellcheck/exports",
+            "/Software/Elixir/exports",
+            "/Software/Elixir/bin",
+            "/Software/Ctags/exports",
+            "/Library/Frameworks/Python.framework/Versions/3.5/bin",
+            "/usr/local/bin"
+        ],
+        "windows": []
+    },
+    "show_marks_in_minimap": true,
+    "syntax_map": {
+        "cargo": "rust",
+        "facts": "shell",
+        "html (django)": "html",
+        "html (rails)": "rhtml",
+        "html 5": "html",
+        "magicpython": "python",
+        "php": "html",
+        "python django": "python",
+        "pythonimproved": "python",
+        "rust enhanced": "rust",
+        "task": "shell"
+    },
+    "show_panel_on_save": "view",
+    "styles": [
+        {
+            "mark_style": "squiggly_underline",
+            "priority": 1,
+            "scope": "region.yellowish markup.changed.sublime_linter markup.warning.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "warning"
+            ]
+        },
+        {
+            "mark_style": "outline",
+            "priority": 1,
+            "scope": "region.redish markup.deleted.sublime_linter markup.error.sublime_linter",
+            "icon": "dot",
+            "types": [
+                "error"
+            ]
+        }
+    ],
+
 }
