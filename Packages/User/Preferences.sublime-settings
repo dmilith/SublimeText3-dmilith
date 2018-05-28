@@ -95,12 +95,12 @@
 		"ActionScript",
 		"AppleScript",
 		"ASP",
+		"Batch File",
 		"C#",
 		"Clojure",
 		"Color Highlighter",
 		"Color Scheme - Default",
 		"Color Scheme - Legacy",
-		"Batch File",
 		"CSS",
 		"D",
 		"Environment Settings",
@@ -130,8 +130,7 @@
 		"Textile",
 		"Theme - Default",
 		"Vintage",
-		"Vintageex",
-		"YcmdCompletion"
+		"Vintageex"
 	],
 	"indent_guide_options":
 	[

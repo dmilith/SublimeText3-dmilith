@@ -39,8 +39,7 @@
 		"SublimeLinter-xmllint",
 		"SuperElixir",
 		"Theme - Cobalt2",
-		"TOML",
-		"YcmdCompletion"
+		"TOML"
 	],
 	"repositories":
 	[
