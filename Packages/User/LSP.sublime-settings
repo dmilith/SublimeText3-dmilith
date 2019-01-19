@@ -6,7 +6,10 @@
 		{
 			"command":
 			[
-				"/Users/dmilith/.cargo/bin/rls"
+				"rustup",
+				"run",
+				"nightly",
+				"rls"
 			],
 			"enabled": true,
 			"languageId": "rust",
@@ -16,7 +19,6 @@
 			],
 			"syntaxes":
 			[
-				"Packages/Rust/Rust.sublime-syntax",
 				"Packages/Rust Enhanced/RustEnhanced.sublime-syntax"
 			]
 		}
