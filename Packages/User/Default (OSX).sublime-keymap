@@ -102,7 +102,14 @@
   { "keys": ["ctrl+super+e"], "command": "sublimelinter_goto_error", "args": {"direction": "next"} },
   { "keys": ["ctrl+super+c"], "command": "sublimelinter_goto_error", "args": {"direction": "previous"} },
   { "keys": ["super+b"], "command": "sublimelinter_show_all_errors" },
-  { "keys": ["ctrl+super+t"], "command": "sublimelinter_toggle_linter", "args": {"which": "all"}}
+  { "keys": ["ctrl+super+t"], "command": "sublimelinter_toggle_linter", "args": {"which": "all"}},
+
+  { "keys": ["super+ctrl+right"], "command": "sublime_linter_goto_error",
+    "args": { "direction": "next" }
+  },
+  { "keys": ["super+ctrl+left"], "command": "sublime_linter_goto_error",
+    "args": { "direction": "previous" }
+  }
 
 ]
 
