@@ -176,7 +176,7 @@
 	"sidebar_medium": true,
 	"sidebar_xlarge": false,
 	"tab_size": 4,
-	"theme": "Cobalt2.sublime-theme",
+	"theme": "Seti_orig.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_auto_start_localserver": 1,
