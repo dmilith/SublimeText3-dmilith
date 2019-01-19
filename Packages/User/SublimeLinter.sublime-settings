@@ -2,7 +2,7 @@
     "debug": false,
     "delay": 0.1,
     "gutter_theme": "Circle",
-    "lint_mode": "background",
+    "lint_mode": "save",
     "linters": {
         "annotations": {
             "@disable": false,
