@@ -83,7 +83,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 17,
+	"font_size": 18,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
@@ -120,6 +120,7 @@
 		"Rust",
 		"Scala",
 		"SQL",
+		"SublimeHaskell",
 		"SublimeLinter-flake8",
 		"SublimeLinter-xmllint",
 		"TCL",
@@ -142,6 +143,7 @@
 		"*":
 		[
 			"/Users/dmilith/.cargo/bin",
+			"/Software/Curl_lib/bin",
 			"/Software/Graphicsmagick/exports",
 			"/Software/ImageMagick/exports",
 			"/Software/Rust/exports",
@@ -166,10 +168,11 @@
 	"shift_tab_unindent": true,
 	"show_encoding": true,
 	"show_markers_on_untracked_file": true,
+	"show_panel_on_build": false,
 	"sidebar_font_big": true,
 	"sidebar_font_small": false,
 	"sidebar_large": true,
-	"sidebar_medium": true,
+	"sidebar_medium": false,
 	"sidebar_xlarge": false,
 	"tab_size": 4,
 	"theme": "Seti_orig.sublime-theme",

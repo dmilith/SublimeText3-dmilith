@@ -1,28 +1,19 @@
 {
-	"auto_complete_selector": "source - (comment, string.quoted)",
-	"auto_complete_triggers":
-	[
-		{
-			"characters": ".",
-			"selector": "source.rust"
-		},
-		{
-			"characters": "::",
-			"selector": "source.rust"
-		}
-	],
-	"extensions":
-	[
-		"rs",
-		"rs"
-	],
 	"rust_gutter_style": "shape",
-	"rust_include_shell_env": true,
+	"rust_include_shell_env": false,
 	"rust_phantom_style": "normal",
 	"rust_region_style": "outline",
 	"rust_syntax_checking": true,
 	"rust_syntax_checking_include_tests": true,
 	"rust_syntax_error_color": "#F00",
 	"rust_syntax_hide_warnings": false,
-	"rust_syntax_warning_color": "#FB2"
+	"rust_syntax_warning_color": "#DB2",
+	"rust_syntax_checking_method": "clippy",
+	"rust_env": {
+		"PATH": "/Users/dmilith/.cargo/bin/cargo:/Software/Curl_lib/bin:$PATH",
+		"OPENSSL_LIB_DIR": "/Software/Curl_lib/lib",
+		"OPENSSL_INCLUDE_DIR": "/Software/Curl_lib/include",
+		"OPENSSL_DIR": "/Software/Curl_lib",
+		"PKG_CONFIG_PATH": "/Software/Curl_lib/lib/pkgconfig"
+	}
 }

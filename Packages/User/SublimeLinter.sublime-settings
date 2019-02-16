@@ -106,8 +106,8 @@
             "args": [],
             "crate-root": "main.rs",
             "excludes": [],
-            "use-cargo": true,
-            "use-cargo-check": true,
+            "use-cargo": false,
+            "use-cargo-check": false,
             "use-crate-root": false
         },
         "shellcheck": {
@@ -135,6 +135,7 @@
         "linux": [],
         "osx": [
             "/Users/dmilith/.cargo/bin",
+            "/Software/Curl_lib/bin",
             "/Software/Rust/exports",
             "/Services/Rust/exports",
             "/Software/Shellcheck/exports",
@@ -160,7 +161,7 @@
         "rust enhanced": "rust",
         "task": "shell"
     },
-    "show_panel_on_save": "view",
+    "show_panel_on_save": "never",
     "styles": [
         {
             "mark_style": "squiggly_underline",
