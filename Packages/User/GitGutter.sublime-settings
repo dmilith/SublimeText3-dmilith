@@ -1,6 +1,6 @@
 {
   // Custom path to git binary when not in PATH
-  "git_binary": "/Applications/Personal/Tower.app/Contents/Resources/git/bin/git",
+  "git_binary": "/Software/Git/exports/git",
 
   // Live mode evaluates changes every time file is modified,
   // Set false to disable evaluation after each input
@@ -8,7 +8,7 @@
 
   // Focus Change mode evaluates changes every time a view gets the focus
   // Set false to disable evaluation when changing views
-  "focus_change_mode": true,
+  "focus_change_mode": false,
 
   // When set to true GitGutter runs asynchronously in a seperate thread
   // This may cause a small delay between a modification and the icon change
