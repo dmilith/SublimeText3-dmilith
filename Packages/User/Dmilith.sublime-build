@@ -1,0 +1,4 @@
+{
+    "shell_cmd": "bin/build",
+    "working_dir": "/Projects/travmole"
+}
