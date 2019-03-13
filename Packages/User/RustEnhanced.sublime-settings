@@ -1,12 +1,12 @@
 {
-	"rust_gutter_style": "shape",
+	"rust_gutter_style": "circle",
 	"rust_include_shell_env": false,
 	"rust_phantom_style": "normal",
 	"rust_region_style": "outline",
 	"rust_syntax_checking": true,
 	"rust_syntax_checking_include_tests": true,
-	"rust_syntax_error_color": "#F00",
-	"rust_syntax_hide_warnings": false,
+	"rust_syntax_error_color": "#F03",
+	"rust_syntax_hide_warnings": true,
 	"rust_syntax_warning_color": "#DB2",
 	"rust_syntax_checking_method": "clippy",
 	"rust_env": {

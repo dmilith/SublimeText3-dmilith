@@ -1,4 +1,15 @@
 {
+	"added_words":
+	[
+		"plugins",
+		"json",
+		"dev",
+		"egrep",
+		"awk",
+		"grep",
+		"dmilith",
+		"http"
+	],
 	"animation_enabled": false,
 	"atomic_save": false,
 	"auto_complete": true,
@@ -62,7 +73,8 @@
 		"*.psd",
 		"*.db",
 		"*.sublime-workspace",
-		"tmp*"
+		"tmp*",
+		".VolumeIcon.icns"
 	],
 	"folder_exclude_patterns":
 	[
@@ -76,12 +88,19 @@
 		"target",
 		"deps",
 		"_build",
-		".idea"
+		".idea",
+		".fseventsd",
+		".Trashes",
+		".Spotlight-V100",
+		".TemporaryItems"
 	],
 	"font_face": "Dejavu Sans Code",
 	"font_options":
 	[
-		"dlig"
+		"dlig",
+		"ss06",
+		"gray_antialias",
+		"no_round"
 	],
 	"font_size": 19,
 	"getenv_command": true,
@@ -99,14 +118,12 @@
 		"C#",
 		"Clojure",
 		"Color Highlighter",
-		"Color Scheme - Default",
-		"Color Scheme - Legacy",
 		"D",
 		"Environment Settings",
+		"GitGutter",
 		"Go",
 		"Graphviz",
 		"Groovy",
-		"Haskell",
 		"Java",
 		"LaTeX",
 		"Lisp",
@@ -121,11 +138,11 @@
 		"Scala",
 		"SQL",
 		"SublimeHaskell",
+		"SublimeLinter-clang",
 		"SublimeLinter-flake8",
 		"SublimeLinter-xmllint",
 		"TCL",
 		"Textile",
-		"Theme - Default",
 		"Vintage",
 		"Vintageex"
 	],
@@ -138,6 +155,7 @@
 	"inhibit_sublime_completions": false,
 	"line_padding_bottom": 4,
 	"line_padding_top": 4,
+	"native_tabs": "disabled",
 	"paths":
 	{
 		"*":

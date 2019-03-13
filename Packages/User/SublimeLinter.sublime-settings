@@ -2,7 +2,7 @@
     "debug": false,
     "delay": 0.1,
     "gutter_theme": "Circle",
-    "lint_mode": "save",
+    "lint_mode": "background",
     "linters": {
         "annotations": {
             "@disable": false,
@@ -115,7 +115,7 @@
             "args": [
                 "--shell=sh",
                 "--color=never",
-                "--exclude=SC2086,SC2034,SC1090,SC1091,SC2164,SC2181,SC2154,SC2004,SC2016,SC1117"
+                "--exclude=SC2086,SC2034,SC1090,SC1091,SC2164,SC2181,SC2154,SC2004,SC2016,SC1117,SC2230"
             ],
             "exclude": "",
             "excludes": []
