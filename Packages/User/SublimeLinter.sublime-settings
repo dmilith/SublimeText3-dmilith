@@ -1,8 +1,8 @@
 {
     "debug": false,
-    "delay": 0.1,
+    "delay": 0.25,
     "gutter_theme": "Circle",
-    "lint_mode": "background",
+    "lint_mode": "save",
     "linters": {
         "annotations": {
             "@disable": false,
@@ -101,15 +101,15 @@
             "args": [],
             "excludes": []
         },
-        "rust": {
-            "@disable": true,
-            "args": [],
-            "crate-root": "main.rs",
-            "excludes": [],
-            "use-cargo": false,
-            "use-cargo-check": false,
-            "use-crate-root": false
-        },
+        // "rust": {
+        //     "@disable": true,
+        //     "args": [],
+        //     "crate-root": "main.rs",
+        //     "excludes": [],
+        //     "use-cargo": false,
+        //     "use-cargo-check": false,
+        //     "use-crate-root": false
+        // },
         "shellcheck": {
             "@disable": false,
             "args": [
@@ -126,7 +126,7 @@
             "excludes": []
         },
         "xmllint": {
-            "@disable": true,
+            "@disable": false,
             "args": [],
             "excludes": []
         }
@@ -142,7 +142,7 @@
             "/Software/Elixir/exports",
             "/Software/Elixir/bin",
             "/Software/Ctags/exports",
-            "/Library/Frameworks/Python.framework/Versions/3.5/bin",
+            // "/Library/Frameworks/Python.framework/Versions/3.5/bin",
             "/usr/local/bin"
         ],
         "windows": []
