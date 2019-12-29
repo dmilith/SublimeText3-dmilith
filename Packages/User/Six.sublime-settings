@@ -1,4 +1,4 @@
 // Settings in here override those in "Six/Settings/Six.sublime-settings".
 {
-   "use_system_clipboard": true
+   "use_system_clipboard": false
 }
