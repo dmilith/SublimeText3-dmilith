@@ -1,0 +1,7 @@
+// Settings in here override those in "GitSavvy/GitSavvy.sublime-settings",
+
+{
+    "api_tokens": {
+        "github.com": "acf2042f932973093d56d1a6a0e2c45f8d8a7123"
+    }
+}

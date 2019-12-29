@@ -1,11 +1,8 @@
 {
-    "user": {
         "debug": false,
         "delay": 0.2,
-        "error_color": "E02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Circle/Circle.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "background",
+        "lint_mode": "save",
         "linters": {
             "annotations": {
                 "@disable": false,
@@ -135,9 +132,7 @@
                 "excludes": []
             }
         },
-        "mark_style": "outline",
         "no_column_highlights_line": false,
-        "passive_warnings": true,
         "paths": {
             "linux": [],
             "osx": [
@@ -152,17 +147,6 @@
             ],
             "windows": []
         },
-        "python_paths": {
-            "linux": [],
-            "osx": [
-                "/Library/Frameworks/Python.framework/Versions/3.5/bin",
-                "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages"
-            ],
-            "windows": []
-        },
-        "rc_search_limit": 2,
-        "shell_timeout": 5,
-        "show_errors_on_save": true,
         "show_marks_in_minimap": true,
         "syntax_map": {
             "cargo": "rust",
@@ -177,12 +161,4 @@
             "rust enhanced": "rust",
             "task": "shell"
         },
-        "tooltip_fontsize": "0.36rem",
-        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Inline/Inline.tooltip-theme",
-        "tooltip_theme_excludes": [],
-        "tooltips": true,
-        "use_current_shell_path": true,
-        "warning_color": "DDB700",
-        "wrap_find": true
-    }
 }

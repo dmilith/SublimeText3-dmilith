@@ -76,8 +76,7 @@
 		"target",
 		"deps",
 		"_build",
-		".idea",
-		"lib"
+		".idea"
 	],
 	"font_face": "Monaco",
 	"font_options":
@@ -85,7 +84,7 @@
 		"subpixel_antialias",
 		"no_round"
 	],
-	"font_size": 13,
+	"font_size": 12,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
@@ -100,8 +99,6 @@
 		"Batch File",
 		"C#",
 		"Clojure",
-		"Color Scheme - Default",
-		"Color Scheme - Legacy",
 		"D",
 		"Go",
 		"Graphviz",
@@ -117,9 +114,8 @@
 		"Scala",
 		"TCL",
 		"Textile",
-		"Theme - Default",
 		"Vintage",
-		"Vintageex",
+		"VintageEx",
 		"YcmdCompletion"
 	],
 	"indent_guide_options":
@@ -158,6 +154,7 @@
 	],
 	"save_on_focus_lost": false,
 	"shift_tab_unindent": true,
+	"show_definitions": true,
 	"show_encoding": true,
 	"show_markers_on_untracked_file": true,
 	"sidebar_font_big": true,

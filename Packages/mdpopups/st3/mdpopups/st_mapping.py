@@ -1,7 +1,7 @@
 """Sublime Text language mapping."""
 
 lang_map = {
-    # 'name': (('mapping_alias',), ('tmLanguage_or_sublime-syntax file',))
+    # `'name': (('mapping_alias',), ('tmLanguage_or_sublime-syntax file',))`
     'actionscript': (('as', 'actionscript',), ('ActionScript/ActionScript',)),
     'applescript': (('applescript',), ('AppleScript/AppleScript',)),
     'asp': (('asp',), ('ASP/ASP',)),
@@ -16,6 +16,7 @@ lang_map = {
     'd': (('d',), ('D/D',)),
     'diff': (('diff',), ('Diff/Diff',)),
     'erlang': (('erlang',), ('Erlang/Erlang',)),
+    'elm': (('elm',), ('Elm Syntax Highlighting/src/elm',)),
     'go': (('go',), ('Go/Go',)),
     'groovy': (('groovy',), ('Groovy/Groovy',)),
     'haskell': (('haskell', 'hs'), ('Haskell/Haskell',)),
@@ -45,11 +46,14 @@ lang_map = {
     'railsjs': (('js+erb', 'javascript+erb', 'js+ruby', 'javascript+ruby'), ('Rails/JavaScript (Rails)',)),
     'rst': (('rst', 'rest', 'restructuredtext'), ('RestructuredText/reStructuredText',)),
     'ruby': (('rb', 'ruby'), ('Ruby/Ruby',)),
+    'rust': (('rs', 'rust'), ('Rust/Rust',)),
     'scala': (('scala',), ('Scala/Scala',)),
     'tex': (('tex', 'latex'), ('LaTeX/LaTeX',)),
     'text': (('text',), ('Text/Plain text',)),
     'textile': (('textile',), ('Textile/Textile',)),
-    'typescript': (('typescript', 'ts'), ('TypeScript/TypeScript', 'TypeScriptSyntax/TypeScript')),
+    'typescript': (('typescript', 'ts'), ('TypeScript/TypeScript', 'TypeScript Syntax/TypeScript')),
     'xml': (('xml',), ('XML/XML',)),
-    'yaml': (('yaml',), ('YAML/YAML',))
+    'yaml': (('yaml',), ('YAML/YAML',)),
+    'vhdl': (('vhdl',), ('VHDL/Syntaxes/VHDL', 'HDLProject/sublime-vhdl/Syntaxes/VHDL')),
+    'verilog': (('verilog',), ('Verilog/Verilog', 'HDLProject/sublime-verilog/Verilog'))
 }

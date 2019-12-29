@@ -15,7 +15,7 @@
 	[
 		"rs"
 	],
-	"rust_gutter_style": "circle",
+	"rust_gutter_style": "shape",
 	"rust_include_shell_env": true,
 	"rust_phantom_style": "normal",
 	"rust_region_style": "outline",

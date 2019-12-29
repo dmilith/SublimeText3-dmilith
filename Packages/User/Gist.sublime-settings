@@ -1,13 +1,13 @@
 {
-  "username": "",
+  "username": "dmilith",
   "password": "",
 
   // Your GitHub API token
   // see: https://github.com/condemil/Gist#generating-access-token
-  "token": "",
+  "token": "acf2042f932973093d56d1a6a0e2c45f8d8a7123",
 
   // Show GitHub organizations
-  "include_orgs": true,
+  "include_orgs": false,
 
   // Show GitHub users
   "include_users": false,
@@ -34,7 +34,7 @@
   "use_starred": false,
 
   // Limit to gists with specific prefix
-  "gist_prefix": "ST3"
+  "gist_prefix": "dmil-"
 
   // Limit to gists with specific tag (#tag)
   //"gist_tag": "snippet"
