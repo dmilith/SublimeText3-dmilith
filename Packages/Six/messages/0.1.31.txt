@@ -1,3 +1,0 @@
-CHANGELOG 0.1.31
-
-	BUGFIX: fix key name in key map to avoid error log message in console

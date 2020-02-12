@@ -1,5 +1,0 @@
-CHANGELOG 0.8.4
-
-    FIX: cit and cat now find tags if they contain attributes.
-
-    Follow https://twitter.com/sublimesix for important notifications.

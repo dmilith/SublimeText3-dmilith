@@ -1,5 +1,0 @@
-CHANGELOG 0.1.19
-	
-	* NEW: implement >>
-	* BUGFIX: stop outlining > operator's target lines
-	

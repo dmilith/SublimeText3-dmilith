@@ -1,27 +1,28 @@
 {
 	"animation_enabled": false,
 	"atomic_save": false,
-	"auto_complete": true,
+	"auto_complete": false,
 	"auto_complete_commit_on_tab": false,
-	"automatic_completion_popup": true,
+	"automatic_completion_popup": false,
 	"binary_file_patterns":
 	[
-		"generated/*",
-		"*.tbz2",
-		"*.gzip",
-		"*.jpg",
-		"*.jpeg",
-		"*.png",
-		"*.gif",
-		"*.ttf",
-		"*.tga",
 		"*.dds",
-		"*.ico",
 		"*.eot",
-		"*.pdf",
-		"*.swf",
+		"*.gif",
+		"*.gzip",
+		"*.ico",
 		"*.jar",
-		"*.zip"
+		"*.jpeg",
+		"*.jpg",
+		"*.pdf",
+		"*.png",
+		"*.swf",
+		"*.tbz2",
+		"*.tga",
+		"*.ttf",
+		"*.zip",
+		"generated/*",
+		"web/**"
 	],
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
@@ -112,10 +113,12 @@
 		"R",
 		"Rust",
 		"Scala",
+		"Six",
 		"TCL",
 		"Textile",
 		"Vintage",
 		"VintageEx",
+		"Vintageous",
 		"YcmdCompletion"
 	],
 	"indent_guide_options":
@@ -127,6 +130,7 @@
 	"inhibit_sublime_completions": false,
 	"line_padding_bottom": 5,
 	"line_padding_top": 3,
+	"neovintageous_build_version": 11100,
 	"paths":
 	{
 		"*":
@@ -168,5 +172,7 @@
 	"trim_trailing_white_space_on_save": true,
 	"use_auto_start_localserver": 1,
 	"use_simple_full_screen": true,
+	"vintageous_use_ctrl_keys": null,
+	"vintageous_use_super_keys": null,
 	"word_wrap": true
 }

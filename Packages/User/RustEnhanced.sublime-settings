@@ -1,16 +1,17 @@
 {
 	"auto_complete_selector": "source - (comment, string.quoted)",
-	"auto_complete_triggers":
-	[
-		{
-			"characters": ".",
-			"selector": "source.rust"
-		},
-		{
-			"characters": "::",
-			"selector": "source.rust"
-		}
-	],
+	// "auto_complete_triggers":
+	// [
+	// 	{
+	// 		"characters": ".",
+	// 		"selector": "source.rust"
+	// 	},
+	// 	{
+	// 		"characters": "::",
+	// 		"selector": "source.rust"
+	// 	}
+	// ],
+	"rust_syntax_checking_method": "clippy",
 	"extensions":
 	[
 		"rs"
@@ -23,5 +24,7 @@
 	"rust_syntax_checking_include_tests": true,
 	"rust_syntax_error_color": "#F00",
 	"rust_syntax_hide_warnings": false,
-	"rust_syntax_warning_color": "#FB2"
+	"rust_syntax_warning_color": "#FB2",
+
+    "rust_message_status_bar": false,
 }

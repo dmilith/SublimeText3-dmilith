@@ -24,7 +24,7 @@
 		}
 	},
 	"complete_all_chars": false,
-	"completion_hint_type": "auto",
+	"completion_hint_type": "detail",
 	"default_clients":
 	{
 		"clangd":
@@ -248,7 +248,6 @@
 	"resolve_completion_for_snippets": false,
 	"rust-client.channel": "stable",
 	"show_diagnostics_in_view_status": true,
-	"show_diagnostics_phantoms": false,
 	"show_status_messages": true,
 	"show_view_status": true
 }

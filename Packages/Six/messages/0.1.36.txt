@@ -1,3 +1,0 @@
-CHANGELOG 0.1.36
-
-	NEW: add gv for restoring last visual mode selections from normal mode
