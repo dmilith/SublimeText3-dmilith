@@ -1,0 +1,5 @@
+Changes in 1.0.4
+================
+
+    * Slightly better debug log messages to console.
+    * Add the PackageControl's messages mechanism

@@ -1,0 +1,27 @@
+Pre-release of version 2.0.0 
+============================
+
+15/01/2020
+
+Please Note:
+------------
+
+The package is about to be updated to version 2.0.0, which is a major re-factory 
+of the whole code.  
+You may have noticed that it has already a new name.  
+As soon as I tested the package on Windows and Mac (unfortunately I don't have a 
+Linux machine), it will be released. 
+This probably will take about a week, maybe two, so it is imminent.
+
+Some stuff will be deprecated and some will change.  
+I'm trying to make the switch to the new version as painless as possible. 
+For example the settings inside a project will be
+differently set, so I wrote a command to convert the old settings into the new. 
+
+If you want to know more, please visit the source code and check the 
+"command_line_evaluation" branch. If you wish to try already the new version, 
+un-install the package (if installed through PackageControl) and clone the git 
+repository to your Packages folder, then switch to the "command_line_evaluation" 
+branch.  
+Be sure to carefully read the new README.md file in that branch to know how 
+version 2 is different from version 1 and how it works.

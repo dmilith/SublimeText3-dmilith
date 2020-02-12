@@ -1,0 +1,5 @@
+Changes in 1.0.9
+================
+
+    * Fixed a small bug when "project_path" Sublime's varaible
+      is not yet set and ready

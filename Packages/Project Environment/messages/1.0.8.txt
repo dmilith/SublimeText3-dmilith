@@ -1,0 +1,15 @@
+Changes in 1.0.8
+================
+
+    * New settings have been introduced:
+    	* "set_sublime_variables": false
+		* "sublime_variables_prefix" : ""
+		* "sublime_variables_capitalized" : false
+
+		change them in your ProjectEnvironment.sublime-settings to
+		get some variables from within Sublime.
+		This varaibles are:
+		"project_path", "project", "project_name", "project_base_name", "packages"
+
+		You can add a rpefix to those variables (to avoid conflicts, for example) 
+		and you can decide to make them all capitalised.

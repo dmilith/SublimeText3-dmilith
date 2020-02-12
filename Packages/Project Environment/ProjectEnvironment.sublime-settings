@@ -1,0 +1,13 @@
+{
+	// If true some debugging information will be preinted on console
+    "print_output": false,
+    // If true some variables available in Sublime's API, will be exposed as
+    // standard environment variables.
+    // these are:
+    // "project_path", "project", "project_name", "project_base_name", "packages"
+    "set_sublime_variables": false,
+    // It may be useful to add a prefix to those variables so that they don't confict with yours
+    "sublime_variables_prefix": "",
+    // those variables can be all capitalised if you wish. "project" will become "PROJECT"
+    "sublime_variables_capitalized": false
+}

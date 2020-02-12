@@ -1,0 +1,4 @@
+Changes in 1.0.10
+=================
+
+    * Fixed a problem introduced with 1.0.9

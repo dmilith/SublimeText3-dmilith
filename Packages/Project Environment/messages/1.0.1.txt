@@ -1,0 +1,4 @@
+Changes in 1.0.1
+================
+
+    * Improved the regular expression that checks for variables in a file.

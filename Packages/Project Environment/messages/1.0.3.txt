@@ -1,0 +1,4 @@
+Changes in 1.0.3
+================
+
+    * Add a command to force reload the environment in a project. Available by right clicking on any view.

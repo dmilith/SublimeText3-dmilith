@@ -1,0 +1,6 @@
+Changes in 1.0.7
+================
+
+    * Regex captures key, quote and variable after equal sign until first space character or variable inside quotes. Everything after quotes or first space character is ignored.
+      Ex: `export MYVAR="this that" # this set my variable`
+	* Great thanks to Gustaf Ekeberg for is effort in solving this.

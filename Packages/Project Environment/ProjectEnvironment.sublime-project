@@ -1,0 +1,46 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+        }
+	],
+	"settings":
+	{
+		"project_environment":
+		{
+			"env":
+			{
+				"CROSS_PLATFORM_ENV": "cross_platform_env"
+			},
+			"linux":
+			{
+				"env":
+				{
+					"IN_LINE_ENV": "in_line_env_linux"
+				},
+				"env_file": "./env_tests/env_test.sh"
+			},
+			"osx":
+			{
+				"env":
+				{
+					"IN_LINE_ENV": "in_line_env_mac"
+				},
+				"env_file": "./env_tests/env_test.sh"
+			},
+			"print_output": true,
+			"set_sublime_variables": true,
+			"sublime_variables_capitalized": true,
+			"sublime_variables_prefix": "sublime_",
+			"windows":
+			{
+				"env":
+				{
+					"IN_LINE_ENV": "in_line_env_window"
+				},
+				"env_file": "./env_tests/env_test.bat"
+			}
+		}
+	}
+}

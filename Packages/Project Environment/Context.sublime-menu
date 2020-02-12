@@ -1,0 +1,17 @@
+[   
+    { "caption": "-", "id": "project_environment" },  
+    {
+        "command": "set_project_environment"
+    },
+    {
+        "command": "update_project_data"
+    },
+    {
+        "command": "clear_project_environment_log"
+    },
+    {
+        "caption": "Update Project to Version 2.0",
+        "command": "update_project_environment_settings"
+    },
+    { "caption": "-"}  
+]

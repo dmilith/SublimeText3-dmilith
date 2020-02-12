@@ -1,0 +1,48 @@
+New Version 2.0.0
+=================
+
+Complete re-factoring of the whole plugin.  
+Projects previously set to work with earlier version of this plugin-in, 
+MUST be updated.  
+
+Fortunately there is a new command to auto-update old projects. It is active 
+only if the Package finds old settings in the Project.
+
+Please consult the documentation at 
+https://bitbucket.org/daniele-niero/sublimeprojectenvironment 
+
+
+Most relevant changes:
+
+  * Name changed from **"Environment Settings"** to **"Project Environment"**
+
+  * It's not longer possible to set variables in the .sublime-settings file.  
+    It seemed redundant since that should be a work done before starting  
+    Sublime itself.
+
+  * To avoid possible conflicts, project specific settings have now to go  
+    inside the "project_environment" entry
+
+  * Beside that, the whole structure of the settings inside the project is  
+    changed.
+
+  * A new window command have been added to overcome the above issue and to 
+    update old projects: "update_project_environment_settings", labled 
+    throughout Sublime as ""Update Project to Version 2.0"
+    Active only if old settings are found in the active project.
+    Available as all the other commands from Command Palette, Menu and 
+    Context Menu
+
+  * Environment command files are no parsed with regular expressions anymore, 
+    but executed in a child process through python's subprocess.Popen (with 
+    shell=False, so it is safe).
+    All the environment variables set in that child process will be used to
+    update the main process' variables. 
+    This means that these files can execute complex command line scripts to set
+    up the environment, something that wasn't possible using regular expressions.
+	
+  * Output messages have their own output panel.
+
+  * A new window command have been added to clear the output panel: 
+  	"clear_project_environment_log".
+

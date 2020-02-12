@@ -1,0 +1,6 @@
+[
+   { "caption": "Project Environment: Set Project Environment", "command": "set_project_environment"},
+   { "caption": "Project Environment: Update Project Data", "command": "update_project_data"},
+   { "caption": "Project Environment: Clear Log", "command": "clear_project_environment_log"},
+   { "caption": "Project Environment: Update Project to Version 2.0", "command": "update_project_environment_settings"},
+]

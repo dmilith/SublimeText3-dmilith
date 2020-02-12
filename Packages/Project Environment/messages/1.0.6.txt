@@ -1,0 +1,5 @@
+Changes in 1.0.6
+================
+
+    * Better regular expression that catches variables inside quotes in a .sh, .bat or equivalent file. Ex: `export MYVAR="this that"`
+    * Greatly simplified the above regular expression (this should fix issue #2 for real)

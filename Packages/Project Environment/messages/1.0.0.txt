@@ -1,0 +1,4 @@
+First Release (V1.0.0)
+===
+
+Environment Variables can be set specifying the OS.

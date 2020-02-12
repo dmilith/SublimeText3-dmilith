@@ -1,0 +1,41 @@
+[
+  {
+    "caption": "Preferences",
+    "id": "preferences",
+    "children": [
+      {
+        "caption": "Package Settings",
+        "id": "package-settings",
+        "children": [
+          {
+            "caption": "Project Environment",
+            "children": [
+              {
+                "caption": "Settings",
+                "command": "edit_settings",
+                "args": {
+                  "base_file": "${packages}/ProjectEnvironment/ProjectEnvironment.sublime-settings",
+                  "default": "// Settings in here override those in \"/ProjectEnvironment/ProjectEnvironment.sublime-settings\",\n\n{\n\t$0\n}\n"
+                }
+              },
+              {
+                "command": "set_project_environment"
+              },
+              {
+                "command": "update_project_data"
+              },
+              {
+                "caption": "Clear Log",
+                "command": "clear_project_environment_log"
+              },
+              {
+                "caption": "Update Project to Version 2.0",
+                "command": "update_project_environment_settings"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

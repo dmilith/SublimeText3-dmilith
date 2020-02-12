@@ -1,0 +1,4 @@
+Changes in 1.0.2
+================
+
+    * README.md edited with more useful informations

@@ -1,0 +1,30 @@
+ProjectEnvironment
+==================
+
+A plugin for SublimeText 3 that allows to set environment variables in the 
+.sublime-project file.
+
+--------------------------------------------------------------------------------
+
+Variables set with Project Environment are available throughout Sublime. 
+Builds, scripts, even other plugins can relay and use them.
+
+For example I use it to...
+
+  * set *PYTHONPATH* and have python run successfully scripts that use my custom
+    tools, from within Sublime. 
+    Anaconda (https://packagecontrol.io/packages/Anaconda) picks up my 
+    *PYTHONPATH* too and nicely present code completion on my custom code.
+  
+  * Set *PATH* to point to some custom tools.
+
+  * Define all the possible custom environment variables that my project needs. 
+    (obviously!)
+
+The very nice thing about ProjectEnvironment is that all the variables it 
+sets are set per project. ProjectEnvironment can catch when a Sublime's 
+project change and re-set the environment variables accordingly. Even more, if 
+you have two or more Sublime's windows open at the same time, each time you get 
+focus on one of them, Project Environment will run and re-set the variables. 
+
+All this is completely transparent to the user.

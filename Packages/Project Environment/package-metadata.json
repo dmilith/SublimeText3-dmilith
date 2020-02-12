@@ -1,0 +1,1 @@
+{"sublime_text": ">=3000", "dependencies": [], "version": "2.0.0", "url": "https://bitbucket.org/daniele-niero/sublimeprojectenvironment", "platforms": ["*"], "description": "A plugin for **SublimeText 3** that allows to set environment variables in the .sublime-project file."}

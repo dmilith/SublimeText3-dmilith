@@ -1,0 +1,5 @@
+Changes in 1.0.5
+================
+
+    * Better regular expression that catches variables inside quotes in a .sh, .bat or equivalent file. Ex: `export MYVAR="this that"`
+    * When passing the path to a .sh file in Unix systems, the ~ character is properly handled.
