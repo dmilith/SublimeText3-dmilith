@@ -1,10 +1,40 @@
 [
   {
-    "command": "rust_goto",
+    "command": "lsp_symbol_declaration",
     "keys": ["super+shift+e"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
       ]
-},
+  },
+  {
+      "command": "lsp_symbol_declaration",
+      "keys": ["super+shift+up"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+      ]
+  },
+  {
+      "command": "lsp_symbol_type_definition",
+      "keys": ["super+shift+down"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+      ]
+  },
+  {
+    "command": "lsp_symbol_definition",
+    "keys": ["super+shift+left"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+      ]
+  },
+  {
+      "command": "lsp_symbol_implementation",
+      "keys": ["super+shift+i"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+      ]
+  },
+  {
+      "command": "lsp_symbol_implementation",
+      "keys": ["super+shift+right"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+      ]
+  },
   { "keys": ["escape"], "command": "hide_panel", "context":
     [
       { "key": "panel_visible", "operator": "equal", "operand": true }
