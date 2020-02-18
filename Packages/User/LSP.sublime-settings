@@ -244,7 +244,7 @@
 	"log_debug": false,
 	"log_server": true,
 	"log_stderr": false,
-	"only_show_lsp_completions": true,
+	"only_show_lsp_completions": false,
 	"resolve_completion_for_snippets": false,
 	"rust-client.channel": "stable",
 	"show_diagnostics_in_view_status": true,
