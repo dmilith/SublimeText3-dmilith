@@ -4966,6 +4966,17 @@
 				<string>#AAAAAAFF</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>scope</key>
+			<string>col_112277FF</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#112277FF</string>
+				<key>foreground</key>
+				<string>#A6A6A6FF</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C2134DD</string>
