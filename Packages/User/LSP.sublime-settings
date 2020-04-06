@@ -11,7 +11,7 @@
 				"nightly",
 				"rls"
 			],
-			"enabled": true,
+			"enabled": false,
 			"languageId": "rust",
 			"scopes":
 			[
@@ -21,6 +21,10 @@
 			[
 				"Packages/Rust Enhanced/RustEnhanced.sublime-syntax"
 			]
+		},
+		"rust-analyzer":
+		{
+			"enabled": true
 		}
 	},
 	"complete_all_chars": false,
@@ -235,6 +239,29 @@
 			],
 			"syntaxes":
 			[
+				"Packages/Rust Enhanced/RustEnhanced.sublime-syntax"
+			]
+		},
+		"rust-analyzer":
+		{
+			"command":
+			[
+				"/usr/local/bin/rust-analyzer-mac"
+			],
+			"initializationOptions":
+			{
+				"featureFlags":
+				{
+				}
+			},
+			"languageId": "rust",
+			"scopes":
+			[
+				"source.rust"
+			],
+			"syntaxes":
+			[
+				"Packages/Rust/Rust.sublime-syntax",
 				"Packages/Rust Enhanced/RustEnhanced.sublime-syntax"
 			]
 		}
