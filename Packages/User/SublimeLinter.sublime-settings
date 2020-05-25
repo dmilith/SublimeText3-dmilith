@@ -97,11 +97,6 @@
                     "E116"
                 ]
             },
-            "pyyaml": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
             "rust": {
                 "@disable": true,
                 "args": [],
