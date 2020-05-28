@@ -1,0 +1,6 @@
+// RustFmt Settings - User
+{
+    "executable": ["/Users/dmilith/.cargo/bin/rustfmt"],
+    "format_on_save": true,
+    "error_messages": true,
+}
