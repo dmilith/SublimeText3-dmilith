@@ -30,7 +30,6 @@
 		"Rust Enhanced",
 		"RustFmt",
 		"SideBarEnhancements",
-		"Six",
 		"SSH Config",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
@@ -46,6 +45,7 @@
 		"Theme - Afterglow",
 		"Theme - Cobalt2",
 		"TOML",
+		"Vintageous",
 		"YcmdCompletion"
 	],
 	"repositories":

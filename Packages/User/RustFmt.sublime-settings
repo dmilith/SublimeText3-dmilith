@@ -1,6 +1,6 @@
 // RustFmt Settings - User
 {
-    "executable": ["rustup", "run", "nightly-2020-05-04", "/Users/dmilith/.cargo/bin/rustfmt", "--edition", "2018"],
+    "executable": ["rustup", "run", "nightly-2020-05-04", "/Users/dmilith/.cargo/bin/rustfmt", "--edition", "2018", "--quiet"],
     "format_on_save": true,
     "error_messages": true,
     "use_config_path": true,

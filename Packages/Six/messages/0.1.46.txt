@@ -1,5 +1,0 @@
-CHANGELOG 0.1.46
-
-	NEW: implement B for normal and visual mode
-	NEW: implement E for normal and visual mode
-	

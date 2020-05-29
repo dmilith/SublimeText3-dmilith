@@ -1,5 +1,0 @@
-CHANGELOG 0.1.15
-
-	* BUGFIX: display message when * wraps around the end of the buffer
-
-		Currently, the message is too faint and easy to miss.

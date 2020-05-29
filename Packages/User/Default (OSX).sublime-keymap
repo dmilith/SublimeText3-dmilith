@@ -1,4 +1,10 @@
 [
+ { "keys": ["left"], "command": "move", "args": {"by": "characters", "forward": false} },
+       { "keys": ["right"], "command": "move", "args": {"by": "characters", "forward": true} },
+       { "keys": ["up"], "command": "move", "args": {"by": "lines", "forward": false} },
+       { "keys": ["down"], "command": "move", "args": {"by": "lines", "forward": true} },
+ 
+
   {
     "command": "lsp_symbol_declaration",
     "keys": ["super+shift+e"], "context": [

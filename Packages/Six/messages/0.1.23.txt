@@ -1,4 +1,0 @@
-CHANGELOG 0.1.23
-	
-	* BUGFIX: / search preview accepts counts (normal mode)
-	* BUGFIX: / search preview wraps around buffer end (normal mode)
