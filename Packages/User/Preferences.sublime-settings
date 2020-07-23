@@ -177,6 +177,7 @@
 	"show_definitions": true,
 	"show_encoding": true,
 	"show_markers_on_untracked_file": true,
+	"show_panel_on_build": false,
 	"sidebar_font_big": true,
 	"sidebar_font_small": false,
 	"sidebar_large": true,
