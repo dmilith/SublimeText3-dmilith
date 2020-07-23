@@ -1,4 +1,10 @@
 [
+  { // Open in Sublime Merge
+      "keys": ["super+alt+x"],
+      "command": "exec",
+      "args": {"cmd":  ["smerge", "$project"], "quiet": true},
+
+    },
  { "keys": ["left"], "command": "move", "args": {"by": "characters", "forward": false} },
        { "keys": ["right"], "command": "move", "args": {"by": "characters", "forward": true} },
        { "keys": ["up"], "command": "move", "args": {"by": "lines", "forward": false} },
