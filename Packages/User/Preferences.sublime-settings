@@ -91,7 +91,7 @@
 		"liga",
 		"calt"
 	],
-	"font_size": 14,
+	"font_size": 21,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
