@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"def"
+		"def",
+		"fun"
 	]
 }
