@@ -8,4 +8,4 @@
 /Packages/User/FileHistory.json
 Packages/User/FileHistory_*.json
 Packages/User/Gist.*
-
+Packages/User/*.cache
