@@ -19,6 +19,7 @@
 		"Gist",
 		"Git Config",
 		"Hooks",
+		"Idris Syntax",
 		"Indent XML",
 		"Jinja2",
 		"LSP",
@@ -37,6 +38,7 @@
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SublimeLinter-clang",
+		"SublimeLinter-erlc",
 		"SublimeLinter-flake8",
 		"SublimeLinter-jscs",
 		"SublimeLinter-json",
@@ -56,5 +58,5 @@
 	"repository_channels":
 	[
 		"https://sublime.wbond.net/testing/packages.json"
-	]
+	],
 }

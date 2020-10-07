@@ -22,7 +22,8 @@
 		"*.ttf",
 		"*.zip",
 		"generated/*",
-		"web/**"
+		"web/**",
+		"*.lock"
 	],
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 2,
@@ -91,7 +92,7 @@
 		"liga",
 		"calt"
 	],
-	"font_size": 21,
+	"font_size": 17,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
@@ -108,7 +109,6 @@
 		"Clojure",
 		"D",
 		"EnvSwitcher",
-		"Erlang",
 		"ExportHtml",
 		"Gist",
 		"Go",
@@ -137,7 +137,7 @@
 		"Vintage",
 		"VintageEx",
 		"Vintageous",
-		"YcmdCompletion"
+		"YcmdCompletion",
 	],
 	"indent_guide_options":
 	[
@@ -166,7 +166,7 @@
 			"/usr/local/bin",
 			"/usr/bin",
 			"/bin"
-		]
+		],
 	},
 	"preview_on_click": false,
 	"rulers":
@@ -181,14 +181,15 @@
 	"show_panel_on_build": false,
 	"sidebar_font_big": true,
 	"sidebar_font_small": false,
-	"sidebar_large": true,
-	"sidebar_medium": true,
-	"sidebar_xlarge": false,
+	"sidebar_font_xlarge": true,
+	"sidebar_large": false,
+	"sidebar_medium": false,
+	"sidebar_xlarge": true,
 	"tab_size": 4,
 	"theme": "Cobalt2.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_auto_start_localserver": 1,
 	"use_simple_full_screen": true,
-	"word_wrap": true
+	"word_wrap": true,
 }
