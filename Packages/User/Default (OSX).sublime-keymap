@@ -1,9 +1,20 @@
 [
   { // Open in Sublime Merge
       "keys": ["super+alt+x"],
-      "command": "exec",
-      "args": {"cmd":  ["smerge", "$project"], "quiet": true},
-
+      "command": "sublime_merge_open_repo"
+    },
+    {
+        "command": "lsp_code_actions",
+        "keys": [
+            "super+alt+,"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "codeActionProvider"
+            }
+        ]
     },
  { "keys": ["left"], "command": "move", "args": {"by": "characters", "forward": false} },
        { "keys": ["right"], "command": "move", "args": {"by": "characters", "forward": true} },
