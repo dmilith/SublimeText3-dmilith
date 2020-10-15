@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"def",
-		"fun"
+		"fun",
+		"task"
 	]
 }

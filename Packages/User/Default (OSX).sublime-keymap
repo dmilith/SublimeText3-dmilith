@@ -20,43 +20,63 @@
        { "keys": ["right"], "command": "move", "args": {"by": "characters", "forward": true} },
        { "keys": ["up"], "command": "move", "args": {"by": "lines", "forward": false} },
        { "keys": ["down"], "command": "move", "args": {"by": "lines", "forward": true} },
+
+ // { "keys": ["super+shift+h"], "command": "goto_documentation" },
+ // { "keys": ["super+shift+e"], "command": "goto_definition" },
+ // { "keys": ["super+shift+x"], "command": "goto_definition" },
  
+  // { "keys": ["super+shift+h"], "command": "goto_documentation", "args": {"side_by_side": true} },
+  // { "keys": ["super+shift+e"], "command": "goto_definition", "args": {"side_by_side": true} },
+  // { "keys": ["super+shift+x"], "command": "goto_definition", "args": {"side_by_side": true} },
 
   {
     "command": "lsp_symbol_declaration",
     "keys": ["super+shift+e"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
-      ]
+      ],
+    "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_declaration",
       "keys": ["super+alt+up"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
-      ]
+      ],
+      "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_type_definition",
       "keys": ["super+alt+down"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
-      ]
+      ],
+    "args": {"side_by_side": true}
+  },
+  {
+    "command": "lsp_symbol_definition",
+    "keys": ["super+shift+e"], "context": [
+          {"key": "selector", "operator": "equal", "operand": "source"}
+      ],
+    "args": {"side_by_side": true}
   },
   {
     "command": "lsp_symbol_definition",
     "keys": ["super+shift+up"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
-      ]
+      ],
+    "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_implementation",
       "keys": ["super+shift+i"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
-      ]
+      ],
+      "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_implementation",
       "keys": ["super+shift+down"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source.rust"}
-      ]
+      ],
+      "args": {"side_by_side": true}
   },
   { "keys": ["escape"], "command": "hide_panel", "context":
     [
@@ -127,10 +147,6 @@
 
   { "keys": ["super+v"], "command": "paste_and_indent" },
   { "keys": ["super+shift+v"], "command": "paste" },
-
-  { "keys": ["super+shift+h"], "command": "goto_documentation" },
-  { "keys": ["super+shift+e"], "command": "goto_definition" },
-  { "keys": ["super+shift+x"], "command": "goto_definition" },
 
 // , "args": {"action": "open_latest_closed"}
   { "keys": ["super+alt+left"],     "command": "open_recently_closed_file" },
