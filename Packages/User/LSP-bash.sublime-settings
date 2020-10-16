@@ -15,7 +15,7 @@
         // ...
     },
     "env": {
-        "HIGHLIGHT_PARSING_ERRORS": "1",
+        "HIGHLIGHT_PARSING_ERRORS": "0",
     },
     "settings": {
         "bash": {
