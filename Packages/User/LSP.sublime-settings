@@ -17,12 +17,18 @@
 			],
 			"enabled": true,
 		},
+		"clangd":
+		{
+			"enabled": true
+		},
 	},
 	"diagnostics_gutter_marker": "circle",
 	"diagnostics_highlight_style": "box",
 	"log_debug": false,
 	"log_stderr": false,
+	"show_symbol_action_links": true,
 	"show_diagnostics_count_in_view_status": true,
 	"show_diagnostics_in_view_status": true,
 	"show_view_status": true,
+	"disabled_capabilities": [],
 }
