@@ -5659,6 +5659,28 @@
 				<string>#8D8D8DFF</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>scope</key>
+			<string>col_FFDDEEFF</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#FFDDEEFF</string>
+				<key>foreground</key>
+				<string>#696969FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>col_7FFFF001</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#7FFFF001</string>
+				<key>foreground</key>
+				<string>#8E8E8EFF</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C2134DD</string>

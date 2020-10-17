@@ -1,4 +1,0 @@
-CHANGELOG 0.1.27
-
-	* NEW: implement / for visual mode
-	* NEW: implement / for visual line mode

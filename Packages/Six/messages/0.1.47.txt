@@ -1,4 +1,0 @@
-CHANGELOG 0.1.47
-
-	NEW: implement % for normal and visual mode
-	NEW: implement <count>% for normal mode

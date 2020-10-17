@@ -1,3 +1,0 @@
-CHANGELOG 0.1.25
-	
-	* NEW: implement n for normal mode and operator pending mode

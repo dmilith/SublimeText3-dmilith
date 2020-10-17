@@ -1,4 +1,0 @@
-CHANGELOG 0.1.17
-
-	* BUGFIX: improve selection of current word for *
-	* BUGFIX: improve highlighting of current word for *

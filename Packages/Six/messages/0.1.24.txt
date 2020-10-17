@@ -1,4 +1,0 @@
-CHANGELOG 0.1.24
-	
-	* NEW: /<CR> repeats last search
-	* NEW: /<CR> shows error if no previous search available

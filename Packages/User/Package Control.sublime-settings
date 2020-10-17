@@ -22,12 +22,14 @@
 		"Idris Syntax",
 		"Indent XML",
 		"Jinja2",
+		"Logging Control",
 		"LSP",
 		"LSP-bash",
 		"LSP-elixir",
 		"LSP-html",
 		"LSP-json",
 		"LuaExtended",
+		"NeoVintageous",
 		"nginx",
 		"OpenBSD PF conf syntax highlight",
 		"Package Control",
@@ -37,7 +39,6 @@
 		"RustFmt",
 		"SCSS",
 		"SideBarEnhancements",
-		"Six",
 		"SSH Config",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
@@ -54,7 +55,7 @@
 		"Theme - Afterglow",
 		"Theme - Cobalt2",
 		"TOML",
-		"YcmdCompletion"
+		"YcmdCompletion",
 	],
 	"repositories":
 	[
