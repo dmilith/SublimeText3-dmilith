@@ -29,7 +29,6 @@
 		"LSP-html",
 		"LSP-json",
 		"LuaExtended",
-		"NeoVintageous",
 		"nginx",
 		"OpenBSD PF conf syntax highlight",
 		"Package Control",
@@ -55,6 +54,7 @@
 		"Theme - Afterglow",
 		"Theme - Cobalt2",
 		"TOML",
+		"Vintageous",
 		"YcmdCompletion",
 	],
 	"repositories":

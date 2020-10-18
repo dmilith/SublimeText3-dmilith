@@ -99,9 +99,9 @@
 	"ignore_whitespace": "",
 	"ignored_packages":
 	[
-		"ASP",
 		"ActionScript",
 		"AppleScript",
+		"ASP",
 		"Batch File",
 		"C#",
 		"Clojure",
@@ -119,8 +119,8 @@
 		"Lua",
 		"LuaExtended",
 		"Matlab",
-		"OCaml",
 		"Objective-C",
+		"OCaml",
 		"Pascal",
 		"Perl",
 		"R",
@@ -141,8 +141,6 @@
 		"SuperElixir",
 		"TCL",
 		"Textile",
-		"Vintage",
-		"Vintageous",
 		"YcmdCompletion",
 	],
 	"indent_guide_options":
