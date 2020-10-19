@@ -6,7 +6,7 @@
     {
         "command": "lsp_code_actions",
         "keys": [
-            "super+alt+,"
+            "super+."
         ],
         "context": [
             {
@@ -32,21 +32,21 @@
   {
     "command": "lsp_symbol_declaration",
     "keys": ["super+shift+e"], "context": [
-          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+          {"key": "selector", "operator": "equal", "operand": "source"}
       ],
     "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_declaration",
       "keys": ["super+alt+up"], "context": [
-          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+          {"key": "selector", "operator": "equal", "operand": "source"}
       ],
       "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_type_definition",
       "keys": ["super+alt+down"], "context": [
-          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+          {"key": "selector", "operator": "equal", "operand": "source"}
       ],
     "args": {"side_by_side": true}
   },
@@ -60,21 +60,21 @@
   {
     "command": "lsp_symbol_definition",
     "keys": ["super+shift+up"], "context": [
-          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+          {"key": "selector", "operator": "equal", "operand": "source"}
       ],
     "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_implementation",
       "keys": ["super+shift+i"], "context": [
-          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+          {"key": "selector", "operator": "equal", "operand": "source"}
       ],
       "args": {"side_by_side": true}
   },
   {
       "command": "lsp_symbol_implementation",
       "keys": ["super+shift+down"], "context": [
-          {"key": "selector", "operator": "equal", "operand": "source.rust"}
+          {"key": "selector", "operator": "equal", "operand": "source"}
       ],
       "args": {"side_by_side": true}
   },
