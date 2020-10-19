@@ -1,3 +1,3 @@
 {
-    "command" : "/Software/Ctags/exports/ctags"
+    "command" : "/usr/local/bin/ctags" //"/Software/Ctags/exports/ctags"
 }

@@ -1,1 +1,0 @@
-{"version": "0.2.5", "url": "https://github.com/edelvalle/SuperElixir", "description": "This is a sublime plug-in that provide IDE like capabilities to sublime when working with the Elixir language.", "platforms": ["osx", "linux"], "sublime_text": ">=3126", "dependencies": []}

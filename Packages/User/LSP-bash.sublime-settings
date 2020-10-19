@@ -6,8 +6,23 @@
             "scopes": [
                 "source.shell.bash",
             ],
-            "syntaxes": [
-                "Packages/ShellScript/Bash.sublime-syntax",
+        },
+        {
+            "languageId": "task",
+            "scopes": [
+                "source.shell.bash",
+            ],
+        },
+        {
+            "languageId": "fun",
+            "scopes": [
+                "source.shell.bash",
+            ],
+        },
+        {
+            "languageId": "fact",
+            "scopes": [
+                "source.shell.bash",
             ],
         },
     ],
@@ -16,6 +31,7 @@
     },
     "env": {
         "HIGHLIGHT_PARSING_ERRORS": "0",
+        "GLOB_PATTERN": "**/*@(.sh|.fun|.fact|.facts|.task)"
     },
     "settings": {
         "bash": {

@@ -1,4 +1,4 @@
 {
     "tab_size": 2,
-    "elixir_interpreter": "/Software/Elixir/exports/elixir",
+    "elixir_interpreter": "/usr/local/bin/elixir" //"/Software/Elixir/exports/elixir",
 }

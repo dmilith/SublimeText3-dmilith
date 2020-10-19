@@ -145,15 +145,15 @@
         "show_marks_in_minimap": true,
         "syntax_map": {
             "cargo": "rust",
-            "facts": "shell",
             "html (django)": "html",
             "html (rails)": "rhtml",
             "html 5": "html",
-            "magicpython": "python",
             "php": "html",
-            "python django": "python",
-            "pythonimproved": "python",
             "rust enhanced": "rust",
-            "task": "shell"
+            "sh": "shell",
+            "task": "shell",
+            "fun": "shell",
+            "fact": "shell",
+            "facts": "shell",
         },
 }

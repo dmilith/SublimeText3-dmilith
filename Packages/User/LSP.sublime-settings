@@ -19,7 +19,7 @@
 		},
 		"clangd":
 		{
-			"enabled": true
+			"enabled": true,
 		},
 	},
 	"diagnostics_gutter_marker": "circle",
