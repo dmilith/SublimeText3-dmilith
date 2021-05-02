@@ -1,18 +1,27 @@
-try:
-    from LSP.plugin import __version__ as lsp_version
-except ImportError:
-    lsp_version = (0, 0, 0)
-
-from .api_wrapper import ApiWrapperInterface
+from ._client_handler import ClientHandler
+from ._client_handler import notification_handler
+from ._client_handler import request_handler
+from .activity_indicator import ActivityIndicator
+from .api_wrapper_interface import ApiWrapperInterface
+from .generic_client_handler import GenericClientHandler
+from .node_runtime import NodeRuntime
+from .npm_client_handler import NpmClientHandler
 from .server_npm_resource import ServerNpmResource
-
-if lsp_version >= (1, 0, 0):
-    from .npm_client_handler_v2 import NpmClientHandler
-else:
-    from .npm_client_handler import NpmClientHandler
+from .server_pip_resource import ServerPipResource
+from .server_resource_interface import ServerResourceInterface
+from .server_resource_interface import ServerStatus
 
 __all__ = [
+    'ActivityIndicator',
     'ApiWrapperInterface',
+    'ClientHandler',
+    'GenericClientHandler',
+    'NodeRuntime',
     'NpmClientHandler',
+    'ServerResourceInterface',
+    'ServerStatus',
     'ServerNpmResource',
+    'ServerPipResource',
+    'notification_handler',
+    'request_handler',
 ]

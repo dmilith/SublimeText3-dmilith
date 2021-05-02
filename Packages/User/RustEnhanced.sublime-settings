@@ -27,4 +27,15 @@
 	"rust_syntax_warning_color": "#FB2",
 
     "rust_message_status_bar": false,
+	"cargo_build":
+	{
+		"defaults":
+		{
+			"env":
+			{
+				"RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/local/bin/zld -C split-debuginfo=unpacked -C target-feature=+sse3,+avx,+avx2,+fma",
+				"RUST_BACKTRACE": "1",
+			},
+		},
+	},
 }

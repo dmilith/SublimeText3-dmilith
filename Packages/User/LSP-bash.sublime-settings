@@ -1,5 +1,6 @@
 {
     // @see https://github.com/mads-hartmann/bash-language-server
+    "command": ["/usr/local/bin/node", "/usr/local/bin/bash-language-server", "start"],
     "languages": [
         {
             "languageId": "bash",

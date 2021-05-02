@@ -1,185 +1,104 @@
-from .api_wrapper import ApiWrapperInterface
+from .generic_client_handler import GenericClientHandler
 from .server_npm_resource import ServerNpmResource
-from LSP.plugin.core.handlers import LanguageHandler
-from LSP.plugin.core.protocol import Notification
-from LSP.plugin.core.protocol import Request
-from LSP.plugin.core.protocol import Response
-from LSP.plugin.core.settings import ClientConfig, read_client_config
-from LSP.plugin.core.typing import Any, Callable, Dict, Optional, Tuple
-import shutil
-import sublime
+from .server_resource_interface import ServerResourceInterface
+from LSP.plugin.core.typing import Dict, List, Optional, Tuple
 
-# Keys to read and their fallbacks.
-CLIENT_SETTING_KEYS = {
-    'command': [],
-    'env': {},
-    'experimental_capabilities': {},
-    'languages': [],
-    'initializationOptions': {},
-    'settings': {},
-}  # type: ignore
+__all__ = ['NpmClientHandler']
 
 
-def is_node_installed():
-    return shutil.which('node') is not None
+class NpmClientHandler(GenericClientHandler):
+    """
+    An implementation of :class:`GenericClientHandler` for handling NPM-based LSP plugins.
 
+    Automatically manages an NPM-based server by installing and updating it in the package storage directory.
+    """
+    __server = None  # type: Optional[ServerNpmResource]
 
-class ApiWrapper(ApiWrapperInterface):
-    def __init__(self, client):
-        self.__client = client
+    server_directory = ''
+    """
+    The path to the server source directory, relative to the root directory of this package.
 
-    def on_notification(self, method: str, handler: Callable) -> None:
-        self.__client.on_notification(method, handler)
+    :required: Yes
+    """
 
-    def on_request(self, method: str, handler: Callable) -> None:
-        def on_response(params, request_id):
-            handler(params, lambda result: send_response(request_id, result))
+    server_binary_path = ''
+    """
+    The path to the server "binary", relative to plugin's storage directory.
 
-        def send_response(request_id, result):
-            self.__client.send_response(Response(request_id, result))
+    :required: Yes
+    """
 
-        self.__client.on_request(method, on_response)
-
-    def send_notification(self, method: str, params: Any) -> None:
-        self.__client.send_notification(Notification(method, params))
-
-    def send_request(self, method: str, params: Any, handler: Callable[[Optional[str], bool], None]) -> None:
-        self.__client.send_request(
-            Request(method, params), lambda result: handler(result, False), lambda result: handler(result, True))
-
-
-class NpmClientHandler(LanguageHandler):
-    # To be overridden by subclass.
-    package_name = None
-    server_directory = None
-    server_binary_path = None
-    # Internal
-    __server = None
-
-    def __init__(self):
-        super().__init__()
-        assert self.package_name
-        self.settings_filename = '{}.sublime-settings'.format(self.package_name)
-        # Calling setup() also here as this might run before `plugin_loaded`.
-        # Will be a no-op if already ran.
-        # See https://github.com/sublimelsp/LSP/issues/899
-        self.setup()
-
-    @classmethod
-    def setup(cls) -> None:
-        assert cls.package_name
-        assert cls.server_directory
-        assert cls.server_binary_path
-        if not cls.__server:
-            cls.__server = ServerNpmResource(cls.package_name, cls.server_directory, cls.server_binary_path,
-                                             cls.minimum_node_version())
-        cls.__server.setup()
-
-    @classmethod
-    def cleanup(cls) -> None:
-        if cls.__server:
-            cls.__server.cleanup()
-
-    @property
-    def name(self) -> str:
-        return self.package_name.lower()  # type: ignore
-
-    @classmethod
-    def additional_variables(cls) -> Optional[Dict[str, str]]:
-        return {
-            'server_path': cls.__server.binary_path
-        }
+    # --- NpmClientHandler handlers -----------------------------------------------------------------------------------
 
     @classmethod
     def minimum_node_version(cls) -> Tuple[int, int, int]:
+        """
+        The minimum Node version required for this plugin.
+
+        :returns: The semantic version tuple with the minimum required version. Defaults to :code:`(8, 0, 0)`.
+        """
         return (8, 0, 0)
 
-    @property
-    def config(self) -> ClientConfig:
-        assert self.__server
+    @classmethod
+    def get_additional_variables(cls) -> Dict[str, str]:
+        """
+        Overrides :meth:`GenericClientHandler.get_additional_variables`, providing additional variable for use in the
+        settings.
 
-        configuration = {'enabled': True}  # type: Dict[str, Any]
-        configuration.update(self._read_configuration())
+        The additional variables are:
 
-        if not configuration['command']:
-            configuration['command'] = ['node', self.__server.binary_path] + self.get_binary_arguments()
+        - `${node_bin}`: - holds the binary path of currently used Node.js runtime. This can resolve to just `node`
+          when using Node.js runtime from the PATH or to a full filesystem path if using the local Node.js runtime.
+        - `${server_directory_path}` - holds filesystem path to the server directory (only
+          when :meth:`GenericClientHandler.manages_server()` is `True`).
 
-        self.on_client_configuration_ready(configuration)
-        base_settings_path = 'Packages/{}/{}'.format(self.package_name, self.settings_filename)
-        return read_client_config(self.name, configuration, base_settings_path)
+        Remember to call the super class and merge the results if overriding.
+        """
+        variables = super().get_additional_variables()
+        variables.update({
+            'node_bin': cls._node_bin(),
+            'server_directory_path': cls._server_directory_path(),
+        })
+        return variables
+
+    # --- GenericClientHandler handlers -------------------------------------------------------------------------------
 
     @classmethod
-    def get_binary_arguments(cls):
-        """
-        Returns a list of extra arguments to append when starting server.
-        """
+    def get_command(cls) -> List[str]:
+        return [cls._node_bin(), cls.binary_path()] + cls.get_binary_arguments()
+
+    @classmethod
+    def get_binary_arguments(cls) -> List[str]:
         return ['--stdio']
 
-    def _read_configuration(self) -> Dict:
-        settings = {}  # type: Dict
-        loaded_settings = sublime.load_settings(self.settings_filename)
-
-        if loaded_settings:
-            migrated = self._migrate_obsolete_settings(loaded_settings)
-            changed = self.on_settings_read(loaded_settings)
-            if migrated or changed:
-                sublime.save_settings(self.settings_filename)
-
-            for key, default in CLIENT_SETTING_KEYS.items():
-                settings[key] = loaded_settings.get(key, default)
-
-        return settings
+    @classmethod
+    def manages_server(cls) -> bool:
+        return True
 
     @classmethod
-    def on_settings_read(cls, settings: sublime.Settings):
-        """
-        Called when package settings were read. Receives a `sublime.Settings` object.
-
-        Can be used to change user settings, migrating them to new schema, for example.
-
-        Return True if settings were modified to save changes to file.
-        """
-        return False
-
-    def _migrate_obsolete_settings(self, settings: sublime.Settings):
-        """
-        Migrates setting with a root `client` key to flattened structure.
-        Receives a `sublime.Settings` object.
-
-        Returns True if settings were migrated.
-        """
-        client = settings.get('client')  # type: Dict
-        if client:
-            settings.erase('client')
-            # Migrate old keys
-            for key, value in client.items():
-                settings.set(key, value)
-            return True
-        return False
-
-    @classmethod
-    def on_client_configuration_ready(cls, configuration: Dict) -> None:
-        """
-        Called with default configuration object that contains merged default and user settings.
-
-        Can be used to alter default configuration before registering it.
-        """
-        pass
-
-    @classmethod
-    def on_start(cls, window) -> bool:
-        if not is_node_installed():
-            sublime.status_message("{}: Please install Node.js for the server to work.".format(cls.package_name))
-            return False
+    def get_server(cls) -> Optional[ServerResourceInterface]:
         if not cls.__server:
-            return False
-        return cls.__server.ready
+            cls.__server = ServerNpmResource.create({
+                'package_name': cls.package_name,
+                'server_directory': cls.server_directory,
+                'server_binary_path': cls.server_binary_path,
+                'package_storage': cls.package_storage(),
+                'minimum_node_version': cls.minimum_node_version(),
+                'storage_path': cls.storage_path(),
+            })
+        return cls.__server
 
-    def on_initialized(self, client) -> None:
-        """
-        This method should not be overridden. Use the `on_ready` abstraction.
-        """
-        self.on_ready(ApiWrapper(client))
+    # --- Internal ----------------------------------------------------------------------------------------------------
 
-    def on_ready(self, api: ApiWrapper) -> None:
-        pass
+    @classmethod
+    def _server_directory_path(cls) -> str:
+        if cls.__server:
+            return cls.__server.server_directory_path
+        return ''
+
+    @classmethod
+    def _node_bin(cls) -> str:
+        if cls.__server:
+            return cls.__server.node_bin
+        return ''
+

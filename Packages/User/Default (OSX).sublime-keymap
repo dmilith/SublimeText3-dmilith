@@ -1,4 +1,8 @@
 [
+  {
+      "keys": ["super+;"],
+      "command": "lsp_hover"
+  },
   { // Open in Sublime Merge
       "keys": ["super+alt+x"],
       "command": "sublime_merge_open_repo"
@@ -51,7 +55,7 @@
     "args": {"side_by_side": true}
   },
   {
-    "command": "lsp_symbol_definition",
+   "command": "lsp_symbol_definition",
     "keys": ["super+shift+e"], "context": [
           {"key": "selector", "operator": "equal", "operand": "source"}
       ],

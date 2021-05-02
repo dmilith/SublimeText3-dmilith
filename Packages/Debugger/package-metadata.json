@@ -1,0 +1,1 @@
+{"platforms": ["*"], "description": "Graphical Debugger for Sublime Text using the debug adapter protocol", "sublime_text": ">=4000", "url": "https://github.com/daveleroy/sublime_debugger", "dependencies": [], "version": "0.4.1"}
