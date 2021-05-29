@@ -1,7 +1,5 @@
+# Install used LSP language servers:
 
-NOTE:
-
-1. Sofin is used.
-2. s i Ccache Cppcheck Ctags Elixir
-3. rustup component add rls-preview --toolchain nightly
-
+```bash
+npm install -g diagnostic-languageserver bash-languageserver elixir-language-server
+```

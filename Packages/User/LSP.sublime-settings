@@ -2,6 +2,51 @@
 	"show_diagnostics_panel_on_save": 0,
 	"clients":
 	{
+		"diagnostic-ls": {
+			"enabled": true,
+			"command": [
+				"diagnostic-languageserver",
+				"--stdio"
+			],
+			"selector": "source.shell",
+			"initializationOptions": {
+				"linters": {
+					"shellcheck": {
+						"command": "shellcheck",
+						"debounce": 100,
+						"args": [
+							"--format=json",
+							"--shell=sh",
+						    "--exclude=SC2034,SC1090,SC1091,SC2164,SC2181,SC2154,SC2004,SC2016,SC2086,SC2048",
+							"-"
+						],
+						"offsetLine": 0,
+						"offsetColumn": 0,
+						"sourceName": "shellcheck",
+						"formatLines": 1,
+						"parseJson": {
+							"line": "line",
+							"column": "column",
+							"endLine": "endLine",
+							"endColumn": "endColumn",
+							"security": "level",
+							"message": "\\${message} [\\${code}]",
+						},
+						"securities": {
+							"error": "error",
+							"warning": "warning",
+							"note": "info",
+						},
+					}
+				},
+				"formatters": {},
+				"filetypes": {
+					"shellscript": "shellcheck",
+					"lsp-bash": "shellcheck",
+					"Bash": "shellcheck"
+				},
+			},
+		},
 		"bashls":
 		{
 			"enabled": false,

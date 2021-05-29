@@ -99,7 +99,7 @@
 		"dlig",
 		"subpixel_antialias",
 	],
-	"font_size": 28,
+	"font_size": 18,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,
@@ -132,13 +132,6 @@
 		"Ruby",
 		// "Rust",
 		"Scala",
-		"SublimeLinter-clang",
-		"SublimeLinter-erlc",
-		"SublimeLinter-flake8",
-		"SublimeLinter-jscs",
-		"SublimeLinter-json",
-		"SublimeLinter-pyyaml",
-		"SublimeLinter-xmllint",
 	],
 	"indent_guide_options":
 	[
