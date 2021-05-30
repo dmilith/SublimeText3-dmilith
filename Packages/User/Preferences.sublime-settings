@@ -1,4 +1,5 @@
 {
+	"index_exclude_gitignore": true,
 	"mdpopups.use_sublime_highlighter": true,
 	"mdpopups.user_css": "Packages/User/mdpopups.css",
 	"mdpopups.cache_refresh_time": 1,
