@@ -47,20 +47,22 @@
 				},
 			},
 		},
-		"bashls":
-		{
-			"enabled": false,
-		},
-		"lsp-bash":
+		"LSP-bash":
 		{
 			"enabled": true,
+			"command": [
+				"bash-language-server",
+				"start"
+			],
+			"selector": "source.shell",
 		},
-		"rust-analyzer":
+		"LSP-rust-analyzer":
 		{
 			"command": [
 			  "rust-analyzer-mac"
 			],
 			"enabled": true,
+			"selector": "source.rust",
 			"settings": {
 				"rust-analyzer.diagnostics.disabled": [
 					// "macro-error"
@@ -68,13 +70,8 @@
 				"rust-analyzer.cargo.allFeatures": true
 			}
 		},
-		"clangd":
-		{
-			"enabled": true,
-		},
 	},
 	"diagnostics_gutter_marker": "circle",
-	"diagnostics_highlight_style": "box",
 	"log_debug": false,
 	"show_symbol_action_links": true,
 	"show_diagnostics_count_in_view_status": true,
