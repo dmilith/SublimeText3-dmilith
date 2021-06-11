@@ -7,6 +7,7 @@ from .helpers import version_to_string
 from contextlib import contextmanager
 from LSP.plugin.core.typing import List, Optional, Tuple
 from os import path
+from os import remove
 import os
 import shutil
 import sublime
@@ -49,7 +50,7 @@ class NodeRuntime:
         for runtime in selected_runtimes:
             if runtime == 'system':
                 node_runtime = NodeRuntimePATH()
-                if node_runtime.node_exists():
+                if node_runtime.meets_requirements():
                     try:
                         cls._check_node_version(node_runtime, minimum_version)
                         return node_runtime
@@ -58,7 +59,7 @@ class NodeRuntime:
                         log_and_show_message('{}: Error: {}'.format(package_name, message))
             elif runtime == 'local':
                 node_runtime = NodeRuntimeLocal(path.join(storage_path, 'lsp_utils', 'node-runtime'))
-                if not node_runtime.node_exists():
+                if not node_runtime.meets_requirements():
                     if not sublime.ok_cancel_dialog(NO_NODE_FOUND_MESSAGE.format(package_name=package_name),
                                                     'Install Node.js'):
                         return
@@ -68,7 +69,7 @@ class NodeRuntime:
                         log_and_show_message('{}: Error: Failed installing a local Node.js runtime:\n{}'.format(
                             package_name, ex))
                         return
-                if node_runtime.node_exists():
+                if node_runtime.meets_requirements():
                     try:
                         cls._check_node_version(node_runtime, minimum_version)
                         return node_runtime
@@ -88,8 +89,8 @@ class NodeRuntime:
         self._npm = None  # type: Optional[str]
         self._version = None  # type: Optional[SemanticVersion]
 
-    def node_exists(self) -> bool:
-        return self._node is not None
+    def meets_requirements(self) -> bool:
+        return self._node is not None and self._npm is not None
 
     def node_bin(self) -> Optional[str]:
         return self._node
@@ -134,7 +135,7 @@ class NodeRuntimePATH(NodeRuntime):
     def __init__(self) -> None:
         super().__init__()
         self._node = shutil.which('node')
-        self._npm = 'npm'
+        self._npm = shutil.which('npm')
 
 
 class NodeRuntimeLocal(NodeRuntime):
@@ -143,9 +144,13 @@ class NodeRuntimeLocal(NodeRuntime):
         self._base_dir = path.abspath(path.join(base_dir, node_version))
         self._node_version = node_version
         self._node_dir = path.join(self._base_dir, 'node')
+        self._install_in_progress_marker_file = path.join(self._base_dir, '.installing')
         self.resolve_paths()
 
     def resolve_paths(self) -> None:
+        if path.isfile(self._install_in_progress_marker_file):
+            # Will trigger re-installation.
+            return
         self._node = self.resolve_binary()
         self._node_lib = self.resolve_lib()
         self._npm = path.join(self._node_lib, 'npm', 'bin', 'npm-cli.js')
@@ -170,10 +175,14 @@ class NodeRuntimeLocal(NodeRuntime):
         return [self._node, self._npm]
 
     def install_node(self) -> None:
+        os.makedirs(os.path.dirname(self._install_in_progress_marker_file), exist_ok=True)
+        open(self._install_in_progress_marker_file, 'a').close()
         with ActivityIndicator(sublime.active_window(), 'Installing Node.js'):
             install_node = InstallNode(self._base_dir, self._node_version)
             install_node.run()
             self.resolve_paths()
+        remove(self._install_in_progress_marker_file)
+        self.resolve_paths()
 
 
 class InstallNode:
@@ -241,7 +250,7 @@ class InstallNode:
         except Exception as ex:
             raise ex
         finally:
-            os.remove(archive)
+            remove(archive)
 
 
 @contextmanager
