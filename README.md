@@ -18,3 +18,15 @@ update_rust_analyzer () {
     killall rust-analyzer-mac
 }
 ```
+
+
+## Install rustfmt 2.x (pre-release)
+
+```bash
+cd ~/Projects
+git clone https://github.com/rust-lang/rustfmt.git --branch rustfmt-2.0.0-rc.2
+cd rustfmt
+export CFG_RELEASE=nightly
+export CFG_RELEASE_CHANNEL=nightly
+cargo install --force --path . --locked --features rustfmt,cargo-fmt
+```
