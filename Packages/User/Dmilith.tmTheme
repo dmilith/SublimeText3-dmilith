@@ -18773,6 +18773,28 @@
 				<string>#AAAAAAFF</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>scope</key>
+			<string>col_DDEEBBFF</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#DDEEBBFF</string>
+				<key>foreground</key>
+				<string>#636363FF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>col_FA8C00FF</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#FA8C00FF</string>
+				<key>foreground</key>
+				<string>#1C1C1CFF</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>D8D5E82E-3D5B-46B5-B38E-8C841C2134DD</string>

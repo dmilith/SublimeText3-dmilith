@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["super+'"],
+        "command": "open_uri_from_cursors",
+    }
+]
