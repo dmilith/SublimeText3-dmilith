@@ -33,7 +33,7 @@
 		{
 			"env":
 			{
-				"RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/local/bin/zld -C split-debuginfo=unpacked -C target-feature=+sse3,+avx,+avx2,+fma",
+				"RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/local/bin/zld -C target-feature=+sse3,+avx,+avx2,+fma",
 				"RUST_BACKTRACE": "1",
 			},
 		},
