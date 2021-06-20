@@ -6,6 +6,7 @@ from LSP.plugin import ClientConfig
 from LSP.plugin import DottedDict
 from LSP.plugin import WorkspaceFolder
 from LSP.plugin.core.typing import Any, Dict, List, Optional, Tuple
+from package_control import events
 import os
 import shutil
 import sublime
@@ -40,8 +41,13 @@ class GenericClientHandler(ClientHandler, metaclass=ABCMeta):
 
     @classmethod
     def cleanup(cls) -> None:
-        if os.path.isdir(cls.package_storage()):
-            shutil.rmtree(cls.package_storage())
+
+        def run_async() -> None:
+            if os.path.isdir(cls.package_storage()):
+                shutil.rmtree(cls.package_storage())
+
+        if events.remove(cls.package_name):
+            sublime.set_timeout_async(run_async, 1000)
         super().cleanup()
 
     @classmethod
@@ -132,6 +138,15 @@ class GenericClientHandler(ClientHandler, metaclass=ABCMeta):
         return {
             'server_path': cls.binary_path(),
         }
+
+    @classmethod
+    def get_additional_paths(cls) -> List[str]:
+        """
+        Override to prepend additional paths to the default PATH environment variable.
+
+        Remember to call the super class and merge the results if overriding.
+        """
+        return []
 
     @classmethod
     def manages_server(cls) -> bool:

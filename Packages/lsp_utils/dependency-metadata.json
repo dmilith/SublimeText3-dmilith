@@ -1,1 +1,1 @@
-{"url": "https://github.com/sublimelsp/lsp_utils/issues", "platforms": ["*"], "sublime_text": ">=3000", "description": "Module with LSP-related utilities", "version": "1.13.1"}
+{"url": "https://github.com/sublimelsp/lsp_utils/issues", "version": "1.13.3", "sublime_text": ">=3000", "platforms": ["*"], "description": "Module with LSP-related utilities"}

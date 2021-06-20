@@ -15,6 +15,7 @@ from LSP.plugin import unregister_plugin
 from LSP.plugin import WorkspaceFolder
 from LSP.plugin.core.rpc import method2attr
 from LSP.plugin.core.typing import Any, Callable, Dict, List, Optional, Tuple, TypedDict
+from os import path
 from weakref import ref
 import sublime
 
@@ -122,6 +123,15 @@ class ClientHandler(AbstractPlugin, ClientHandlerInterface):
         # Lazily update command after server has initialized if not set manually by the user.
         if not configuration.command:
             configuration.command = cls.get_command()
+        return None
+
+    @classmethod
+    def on_pre_start(cls, window: sublime.Window, initiating_view: sublime.View,
+                     workspace_folders: List[WorkspaceFolder], configuration: ClientConfig) -> Optional[str]:
+        extra_paths = path.pathsep.join(cls.get_additional_paths())
+        if extra_paths:
+            original_path = configuration.env.get('PATH') or ''
+            configuration.env['PATH'] = path.pathsep.join([extra_paths, original_path])
         return None
 
     # --- ClientHandlerInterface --------------------------------------------------------------------------------------
