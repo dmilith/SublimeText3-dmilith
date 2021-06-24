@@ -37,13 +37,13 @@
 							"warning": "warning",
 							"note": "info",
 						},
-					}
+					},
 				},
 				"formatters": {},
 				"filetypes": {
 					"shellscript": "shellcheck",
 					"lsp-bash": "shellcheck",
-					"Bash": "shellcheck"
+					"Bash": "shellcheck",
 				},
 			},
 		},
@@ -55,21 +55,6 @@
 				"start"
 			],
 			"selector": "source.shell",
-		},
-		"LSP-rust-analyzer":
-		{
-			"command": [
-			  "rust-analyzer-mac"
-			],
-			"enabled": true,
-			"selector": "source.rust",
-			"settings": {
-				"rust-analyzer.diagnostics.disabled": [
-					// "macro-error"
-				],
-				"rust-analyzer.checkOnSave.enable": false,
-				"rust-analyzer.cargo.allFeatures": true
-			}
 		},
 	},
 	"diagnostics_gutter_marker": "circle",

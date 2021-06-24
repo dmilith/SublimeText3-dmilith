@@ -100,7 +100,7 @@
 		"dlig",
 		"subpixel_antialias",
 	],
-	"font_size": 26,
+	"font_size": 28,
 	"getenv_command": true,
 	"gpu_window_buffer": true,
 	"hide_output_when_empty": true,

@@ -7,7 +7,7 @@
         {
             "PYTHONPATH": "%PYTHONPATH%",
             "PATH": "/usr/local/bin:/opt/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/Users/dmilith/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/local/erlang/bin",
-            "RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/local/bin/zld -C split-debuginfo=unpacked -C target-feature=+sse3,+avx,+avx2,+fma"
+            //"RUSTFLAGS": "-C link-arg=-fuse-ld=/usr/local/bin/zld -C split-debuginfo=unpacked -C target-feature=+sse3,+avx,+avx2,+fma"
         },
     }
 }
